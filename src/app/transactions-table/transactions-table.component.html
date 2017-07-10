@@ -1,0 +1,14 @@
+<h2>Transactions Table<h2>
+<div *ngIf='rows'>
+<ngx-datatable         
+    class="bootstrap"       
+    [rows]="rows"        
+    [columns]="columns"   
+    [columnMode]="'force'" 
+    [headerHeight]="50" 
+    [footerHeight]="50"  
+    [rowHeight]="50"      
+    [scrollbarH]="'auto'" 
+    [scrollbarV]="'auto'"> 
+</ngx-datatable>         
+</div>
