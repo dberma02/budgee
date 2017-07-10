@@ -18,30 +18,18 @@ export class ChartsComponent implements OnInit {
               private plotlyService: PlotlyHelperService) { }
 
   ngOnInit() {
-    this.transactionService.getTransactions().then(transactions => this.transactions = transactions);
+    this.transactionService.getTransactions().then(transactions => {
+      this.transactions = transactions;
+      this.monthlyBalance(); 
+    });
   }
 
   monthlyBalance(): void {
-    var tmp =  {
-              x: [1,2,3],
-              y: [4,7,14],
-              type: 'scatter',
-              mode: 'lines',
-              line: { color: 'blue' }
-          };
-
-    var xdat: number[];
-    var ydat: number[];
+    var xdat: string = 'date';
+    var ydat: string = 'balance';
     var plotlyDat: object;
-//    xdat = this.plotlyService.formatPlotlyData(this.transactions, 'debit');
-//    ydat = this.plotlyService.formatPlotlyData(this.transactions, 'balance');
-//    tmp.x=xdat;
-//    tmp.y=ydat;
-    console.log(tmp.x);
-    console.log(tmp.y)
-//    plotlyDat = this.plotlyService.monthlyBalanceChart(xdat, ydat, "june");
-    console.log(tmp);
-    Plotly.newPlot('plotlychart', tmp);
+    plotlyDat = this.plotlyService.monthlyBalanceChart(this.transactions, xdat, ydat, "June");
+    Plotly.newPlot('plotlychart', plotlyDat[0], plotlyDat[1]);
 
   }
 
