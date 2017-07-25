@@ -6,8 +6,7 @@ import { TransactionsTableComponent } from '../transactions-table/transactions-t
 import { DashboardComponent } from '../dashboard/dashboard.component';
 
 const routes: Routes = [ 
-  { path: 'transactions-table', component: TransactionsTableComponent },
-  { path: 'dasboard-component', component: DashboardComponent }
+  { path: 'transactions-table', component: TransactionsTableComponent }
 ]
 
 

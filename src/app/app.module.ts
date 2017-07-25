@@ -9,8 +9,9 @@ import { TransactionService } from './transaction.service';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { TestBootstrapComponent } from './test-bootstrap/test-bootstrap.component';
 import { NavModule } from './nav/nav.module';
-import { AppRoutingModule } from './app-routing.module';
 import { ChartsModule } from './charts/charts.module';
+import { ForecastsModule } from './forecasts/forecasts.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ChartsModule } from './charts/charts.module';
     BrowserModule,
     DashboardModule,
     NavModule,
+    ForecastsModule,
     ChartsModule,
     AppRoutingModule
   ],

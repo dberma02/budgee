@@ -1,3 +1,6 @@
+For successful build, after cloning and running npm install, please grab bootstrap cosmo theme from https://bootswatch.com/cosmo/ and
+save the bootstrap-cosmo.min.css file in /budgee/node_modules/bootstrap/dist/css/bootstrap-cosmo.min.css
+
 # MyMintCli
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
