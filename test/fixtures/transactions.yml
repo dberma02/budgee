@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  debit: 1.5
+  credit: 1.5
+  balance: 1.5
+  date: 2017-07-25
+  name: MyString
+  location: MyText
+  category: MyString
+
+two:
+  debit: 1.5
+  credit: 1.5
+  balance: 1.5
+  date: 2017-07-25
+  name: MyString
+  location: MyText
+  category: MyString
