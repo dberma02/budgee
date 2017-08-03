@@ -22,7 +22,10 @@ module Api
      end
 
     def create
+      #need to make this create all transactions in a loop
+      Transaction.stubData(_params)
       transactions = Transaction.new(_params)
+      transactions = Transaction.stubData(transactions)
       if transactions.save
         render json: transactions, status: 201
       else
@@ -45,7 +48,7 @@ module Api
     private
     def _params
       #  its bc you were putting in the data not in JSON format...
-      params.require(:data).require(:attributes).permit(:debit, :credit, :location, :date, :balance, :category, :name, :start_date, :end_date)
+      params.require(:data).permit(attributes: [:debit, :credit, :location, :date, :balance, :category, :name])
     end
 
     def date_range_params
