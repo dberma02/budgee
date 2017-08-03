@@ -3,7 +3,9 @@ module Api
   class BaseSerializer
     include JSONAPI::Serializer
 
-    attribute :title
-    attribute :content
+    def format_name(attribute_name)
+      attribute_name.to_s.underscore
+    end
+
   end
 end

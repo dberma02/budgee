@@ -607,3 +607,1543 @@ LoadError (cannot load such file -- pry-rails):
 app/controllers/api/transactions_controller.rb:3:in `<class:TransactionsController>'
 app/controllers/api/transactions_controller.rb:2:in `<module:Api>'
 app/controllers/api/transactions_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-07-31 23:30:25 -0400
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/d_berman/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/d_berman/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-07-31 23:30:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-07-31 23:30:31 -0400
+Processing by Api::TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/transactions" for 127.0.0.1 at 2017-07-31 23:48:03 -0400
+Processing by Api::TransactionsController#index as */*
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-07-31 23:51:22 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"debit"=>"10 credit:0 location:\"NYC\" date:\"2017-12-31\" balance:1000 category:\"food\" name:\"bagels r us\""}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: transaction):
+  
+app/controllers/api/transactions_controller.rb:32:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-07-31 23:51:57 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>"debit:10 credit:0 location:\"NYC\" date:\"2017-12-31\" balance:1000 category:\"food\" name:\"bagels r us\""}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<String:0x007fb74e307c78>):
+  
+app/controllers/api/transactions_controller.rb:33:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-07-31 23:52:25 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>{" debit"=>"10 credit:0 location:\"NYC\" date:\"2017-12-31\" balance:1000 category:\"food\" name:\"bagels r us\" ]"}}
+Unpermitted parameter: : debit
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `transactions` (`created_at`, `updated_at`) VALUES ('2017-08-01 03:52:25', '2017-08-01 03:52:25')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 13ms (ActiveRecord: 2.5ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-07-31 23:52:33 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction debit"=>"10 credit:0 location:\"NYC\" date:\"2017-12-31\" balance:1000 category:\"food\" name:\"bagels r us\""}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: transaction):
+  
+app/controllers/api/transactions_controller.rb:32:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-07-31 23:52:42 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>"debit:10 credit:0 location:\"NYC\" date:\"2017-12-31\" balance:1000 category:\"food\" name:\"bagels r us\""}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<String:0x007fb74e39d548>):
+  
+app/controllers/api/transactions_controller.rb:33:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-07-31 23:54:26 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:38: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/api/transactions" for 127.0.0.1 at 2017-07-31 23:55:07 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>"debit:10 credit:0 location:\"NYC\" date:\"2017-12-31\" balance:1000 category:\"food\" name:\"bagels r us\""}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<String:0x007fb74e37cb40>):
+  
+app/controllers/api/transactions_controller.rb:35:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-07-31 23:55:10 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>"debit:10 credit:0 location:\"NYC\" date:\"2017-12-31\" balance:1000 category:\"food\" name:\"bagels r us\""}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<String:0x007fb74e3167f0>):
+  
+app/controllers/api/transactions_controller.rb:35:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-07-31 23:58:50 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>"debit:10 credit:0 location:\"NYC\" date:\"2017-12-31\" balance:1000 category:\"food\" name:\"bagels r us\""}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<String:0x007fb74e272a38>):
+  
+app/controllers/api/transactions_controller.rb:35:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-01 00:00:09 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>"debit:\"10\" credit:\"0\" location:\"NYC\" date:\"2017-12-31\" balance:\"1000\" category:\"food\" name:\"bagels r us\""}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<String:0x007fb74b5c56e8>):
+  
+app/controllers/api/transactions_controller.rb:35:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-01 00:01:12 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>"debit:\"10\" credit:\"0\" location:\"NYC\" date:\"2017-12-31\" balance:\"1000\" category:\"food\" name:\"bagels r us\""}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit!' for #<String:0x007fb74c9900b0>):
+  
+app/controllers/api/transactions_controller.rb:35:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-01 00:01:18 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>"debit:\"10\" credit:\"0\" location:\"NYC\" date:\"2017-12-31\" balance:\"1000\" category:\"food\" name:\"bagels r us\""}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit!' for #<String:0x007fb74c8e13a8>):
+  
+app/controllers/api/transactions_controller.rb:35:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-01 00:04:25 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>"debit:\"10\" credit:\"0\" location:\"NYC\" date:\"2017-12-31\" balance:\"1000\" category:\"food\" name:\"bagels r us\""}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 7, expected 1..2)):
+  
+app/controllers/api/transactions_controller.rb:35:in `[]'
+app/controllers/api/transactions_controller.rb:35:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-01 00:04:39 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>"debit:\"10\" credit:\"0\" location:\"NYC\" date:\"2017-12-31\" balance:\"1000\" category:\"food\" name:\"bagels r us\""}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 7, expected 1..2)):
+  
+app/controllers/api/transactions_controller.rb:35:in `[]'
+app/controllers/api/transactions_controller.rb:35:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-01 00:05:57 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>"debit:\"10\" credit:\"0\" location:\"NYC\" date:\"2017-12-31\" balance:\"1000\" category:\"food\" name:\"bagels r us\""}
+Unpermitted parameter: :transaction
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: transaction):
+  
+app/controllers/api/transactions_controller.rb:35:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-01 00:06:01 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>"debit:\"10\" credit:\"0\" location:\"NYC\" date:\"2017-12-31\" balance:\"1000\" category:\"food\" name:\"bagels r us\""}
+Unpermitted parameter: :transaction
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: transaction):
+  
+app/controllers/api/transactions_controller.rb:35:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-01 00:09:16 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"Transaction"=>{"ChkRef"=>nil, "Debit"=>9.62, "Credit"=>nil, "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}, "transaction"=>{}}
+Unpermitted parameter: :Transaction
+Completed 400 Bad Request in 2ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: transaction):
+  
+app/controllers/api/transactions_controller.rb:35:in `_params'
+app/controllers/api/transactions_controller.rb:14:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-01 00:10:09 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{ "transaction":
+{                                                                              
+   "debit": 9.62,                                                               
+   "credit": null,                                                              
+   "balance": 2642.14,                                                          
+   "date": "6/30/17",                                                           
+   "description": "PIER 66 MARITIME              POS     NEW YORK      NY US        000075",
+   "location": "NYC"
+   "category": "Bars"                                                           
+ }
+}
+  
+ActionDispatch::Http::Parameters::ParseError (743: unexpected token at '{ "transaction":
+{                                                                              
+   "debit": 9.62,                                                               
+   "credit": null,                                                              
+   "balance": 2642.14,                                                          
+   "date": "6/30/17",                                                           
+   "description": "PIER 66 MARITIME              POS     NEW YORK      NY US        000075",
+   "location": "NYC"
+   "category": "Bars"                                                           
+ }
+}'):
+  
+actionpack (5.1.2) lib/action_dispatch/http/parameters.rb:113:in `rescue in parse_formatted_parameters'
+actionpack (5.1.2) lib/action_dispatch/http/parameters.rb:107:in `parse_formatted_parameters'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:358:in `block in POST'
+rack (2.0.3) lib/rack/request.rb:57:in `fetch'
+rack (2.0.3) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:357:in `POST'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:286:in `_wrapper_enabled?'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:235:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-01 00:12:04 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>{"debit"=>9.62, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "location"=>"NYC", "category"=>"Bars"}}
+Unpermitted parameter: :description
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `location`, `category`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, 'NYC', 'Bars', '2017-08-01 04:12:04', '2017-08-01 04:12:04')[0m
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 27ms (Views: 0.7ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-01 00:13:43 -0400
+Processing by Api::TransactionsController#index as */*
+  Parameters: {"transaction"=>{}}
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `title' for #<Transaction:0x007fb74e3084c0>):
+  
+app/controllers/api/transactions_controller.rb:6:in `index'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-01 00:13:56 -0400
+Processing by Api::TransactionsController#index as */*
+  Parameters: {"transaction"=>{}}
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `title' for #<Transaction:0x007fb74e179528>):
+  
+app/controllers/api/transactions_controller.rb:6:in `index'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-01 00:14:05 -0400
+Processing by Api::TransactionsController#index as */*
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `title' for #<Transaction:0x007fb74ad82b98>):
+  
+app/controllers/api/transactions_controller.rb:6:in `index'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 05:51:02 -0400
+  [1m[35m (49.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as */*
+  Parameters: {"transaction"=>{}}
+  [1m[36mTransaction Exists (5.8ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mTransaction Load (12.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 20.6ms)
+
+
+  
+NoMethodError (undefined method `title' for #<Transaction:0x007f9060e64a18>):
+  
+app/controllers/api/transactions_controller.rb:6:in `index'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 05:51:14 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"transaction"=>{"debit"=>9.62, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "location"=>"NYC", "category"=>"Bars"}}
+Unpermitted parameter: :description
+  [1m[35m (12.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (35.6ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `location`, `category`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, 'NYC', 'Bars', '2017-08-02 09:51:15', '2017-08-02 09:51:15')[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 64ms (Views: 0.9ms | ActiveRecord: 56.1ms)
+
+
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 05:52:22 -0400
+Processing by Api::TransactionsController#index as */*
+  Parameters: {"transaction"=>{}}
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `title' for #<Transaction:0x007f906035d368>):
+  
+app/controllers/api/transactions_controller.rb:6:in `index'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:04:48 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:05:17 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:05:18 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:05:32 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-08-02 06:05:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:07:25 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:07:28 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:07:29 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:07:29 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:07:30 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:07:31 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:07:37 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:07:38 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:11:13 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:20:11 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:20:13 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:20:23 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:20:39 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:46:09 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:46:13 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:46:36 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:48:06 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:55:24 -0400
+Processing by Api::TransactionsController#index as */*
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.0ms)
+
+
+  
+NoMethodError (undefined method `title' for #<Transaction:0x007f906052d648>):
+  
+app/controllers/api/transactions_controller.rb:8:in `index'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:59:19 -0400
+Processing by Api::TransactionsController#index as */*
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.7ms)
+
+
+  
+NameError (undefined local variable or method `attribute_name' for #<Api::TransactionSerializer:0x007f90604c66a0>
+Did you mean?  arrtibute_name):
+  
+app/serializers/api/base_serializer.rb:7:in `format_name'
+app/controllers/api/transactions_controller.rb:8:in `index'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:59:27 -0400
+Processing by Api::TransactionsController#index as */*
+  [1m[36mTransaction Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.9ms)
+
+
+  
+NameError (undefined local variable or method `attribute_name' for #<Api::TransactionSerializer:0x007f9060b29600>
+Did you mean?  arrtibute_name):
+  
+app/serializers/api/base_serializer.rb:7:in `format_name'
+app/controllers/api/transactions_controller.rb:8:in `index'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:59:28 -0400
+Processing by Api::TransactionsController#index as */*
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms)
+
+
+  
+NameError (undefined local variable or method `attribute_name' for #<Api::TransactionSerializer:0x007f90604eeee8>
+Did you mean?  arrtibute_name):
+  
+app/serializers/api/base_serializer.rb:7:in `format_name'
+app/controllers/api/transactions_controller.rb:8:in `index'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:59:44 -0400
+Processing by Api::TransactionsController#index as */*
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 06:59:44 -0400
+Processing by Api::TransactionsController#index as */*
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:09:13 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:21: `@' without identifiers is not allowed as an instance variable name
+/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:21: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/controllers/api/transactions_controller.rb:21: `@' without identifiers is not allowed as an instance variable name
+app/controllers/api/transactions_controller.rb:21: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 07:10:10 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:23: syntax error, unexpected keyword_end, expecting ')'
+    end
+       ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:47: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:23: syntax error, unexpected keyword_end, expecting ')'
+app/controllers/api/transactions_controller.rb:47: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 07:10:38 -0400
+Processing by Api::TransactionsController#index as */*
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 19ms (Views: 0.6ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:10:44 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:40:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 07:11:13 -0400
+Processing by Api::TransactionsController#index as */*
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:18:40 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:40:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:22:03 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::TransactionsController::Transactions):
+  
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:22:07 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::TransactionsController::Transactions):
+  
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:23:53 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::TransactionsController::Transactions):
+  
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:25:32 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:28:58 -0400
+  
+ActionController::RoutingError (uninitialized constant ApplicationController::ErrorSerializer):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/api/transactions_controller.rb:2:in `<module:Api>'
+app/controllers/api/transactions_controller.rb:1:in `<top (required)>'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:31:34 -0400
+  
+ActionController::RoutingError (uninitialized constant ApplicationController::ErrorSerializer):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/api/transactions_controller.rb:2:in `<module:Api>'
+app/controllers/api/transactions_controller.rb:1:in `<top (required)>'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:31:44 -0400
+  
+ActionController::RoutingError (uninitialized constant ApplicationController::ErrorSerializer):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/api/transactions_controller.rb:2:in `<module:Api>'
+app/controllers/api/transactions_controller.rb:1:in `<top (required)>'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:33:39 -0400
+  
+ActionController::RoutingError (uninitialized constant Api::TransactionsController::ErrorSerializer):
+  
+app/controllers/api/transactions_controller.rb:4:in `<class:TransactionsController>'
+app/controllers/api/transactions_controller.rb:2:in `<module:Api>'
+app/controllers/api/transactions_controller.rb:1:in `<top (required)>'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:38:52 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:40:03 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:46: syntax error, unexpected tSTRING_DEND, expecting keyword_end
+status: :unprocessable_entity}
+                              ^):
+  
+app/controllers/api/transactions_controller.rb:46: syntax error, unexpected tSTRING_DEND, expecting keyword_end
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:40:35 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:41:23 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:41:36 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:43:08 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:43:20 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:44:22 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:41:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:44:25 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:41:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:44:31 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:41:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:46:38 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:41:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:46:56 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:41:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:47:52 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:41:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:47:53 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:41:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:47:53 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:41:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:48:27 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:41:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:48:28 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:41:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:48:28 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:41:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:48:49 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:48:50 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:49:13 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:49:44 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:49:44 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:49:45 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:49:45 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:49:46 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:50:38 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:50:39 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:50:39 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:50:43 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:50:44 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:50:45 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:50:51 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:50:52 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:50:52 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:51:51 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:52:19 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:52:20 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:52:20 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:53:10 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:53:11 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:53:11 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:53:11 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:53:12 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:57:48 -0400
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:57:58 -0400
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#create as */*
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:39:in `_params'
+app/controllers/api/transactions_controller.rb:16:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 07:58:56 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>{"debit"=>10.0}}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `created_at`, `updated_at`) VALUES (10.0, '2017-08-02 11:58:56', '2017-08-02 11:58:56')[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 15ms (Views: 0.7ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 08:01:28 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>{"debit"=>10.0, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "name"=>"subway", "location"=>"NYC", "category"=>"Bars"}}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `name`, `location`, `category`, `created_at`, `updated_at`) VALUES (10.0, 2642.14, 'subway', 'NYC', 'Bars', '2017-08-02 12:01:38', '2017-08-02 12:01:38')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 15ms (Views: 0.4ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 08:05:52 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>{"debit"=>20.0, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "name"=>"subway", "location"=>"NYC", "category"=>"Bars"}}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `name`, `location`, `category`, `created_at`, `updated_at`) VALUES (20.0, 2642.14, 'subway', 'NYC', 'Bars', '2017-08-02 12:05:52', '2017-08-02 12:05:52')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 15ms (Views: 0.5ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 17:19:01 -0400
+  [1m[35m (34.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>{"debit"=>20.0, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "name"=>"Starbicks", "location"=>"NYC", "category"=>"Cafe"}}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.9ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `name`, `location`, `category`, `created_at`, `updated_at`) VALUES (20.0, 2642.14, 'Starbicks', 'NYC', 'Cafe', '2017-08-02 21:19:01', '2017-08-02 21:19:01')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 41ms (Views: 0.8ms | ActiveRecord: 28.9ms)
+
+
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 17:34:03 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Api::TransactionsController#index as */*
+  Parameters: {"transaction"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:43:in `_params'
+app/controllers/api/transactions_controller.rb:7:in `index'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 17:35:30 -0400
+Processing by Api::TransactionsController#index as */*
+  Parameters: {"transaction"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:43:in `_params'
+app/controllers/api/transactions_controller.rb:7:in `index'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 17:35:31 -0400
+Processing by Api::TransactionsController#index as */*
+  Parameters: {"transaction"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:43:in `_params'
+app/controllers/api/transactions_controller.rb:7:in `index'
+Started GET "/" for 127.0.0.1 at 2017-08-02 17:38:17 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/d_berman/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/d_berman/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 17:38:21 -0400
+Processing by Api::TransactionsController#index as HTML
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:43:in `_params'
+app/controllers/api/transactions_controller.rb:7:in `index'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 17:39:39 -0400
+Processing by Api::TransactionsController#index as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:43:in `_params'
+app/controllers/api/transactions_controller.rb:7:in `index'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 17:40:08 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"{data:{}}"=>nil}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:43:in `_params'
+app/controllers/api/transactions_controller.rb:20:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 17:40:14 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"{data:{}}"=>nil}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:43:in `_params'
+app/controllers/api/transactions_controller.rb:20:in `create'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 17:41:54 -0400
+Processing by Api::TransactionsController#index as */*
+  Parameters: {"transaction"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:43:in `_params'
+app/controllers/api/transactions_controller.rb:7:in `index'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 17:42:24 -0400
+Processing by Api::TransactionsController#index as */*
+  Parameters: {"transaction"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:43:in `_params'
+app/controllers/api/transactions_controller.rb:7:in `index'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 17:42:59 -0400
+Processing by Api::TransactionsController#index as */*
+  Parameters: {"transaction"=>{}}
+  [1m[36mTransaction Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (6.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 26ms (Views: 0.8ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-02 17:43:51 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"{data:{}}"=>nil}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:43:in `_params'
+app/controllers/api/transactions_controller.rb:20:in `create'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 17:51:02 -0400
+Processing by Api::TransactionsController#index as */*
+  Parameters: {"transaction"=>{}}
+Unpermitted parameter: :transaction
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `start_date' for <ActionController::Parameters {} permitted: true>:ActionController::Parameters):
+  
+app/controllers/api/transactions_controller.rb:7:in `index'
+Started GET "/api/transactions" for 127.0.0.1 at 2017-08-02 17:56:01 -0400
+Processing by Api::TransactionsController#index as */*
+  Parameters: {"transaction"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: start_date):
+  
+app/controllers/api/transactions_controller.rb:51:in `start_date'
+app/controllers/api/transactions_controller.rb:7:in `index'
+Started GET "/api/transactions?start_date=9&end_date=10" for 127.0.0.1 at 2017-08-02 18:02:07 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"9", "end_date"=>"10"}
+  [1m[36mTransaction Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 16ms (Views: 0.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-02 18:02:45 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30" for 127.0.0.1 at 2017-08-02 18:02:57 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: end_date):
+  
+app/controllers/api/transactions_controller.rb:56:in `end_date'
+app/controllers/api/transactions_controller.rb:7:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-02 18:06:41 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 17ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-02 18:06:44 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-02 18:07:33 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+      render json: JSONAPI::Serializer.ser
+            ^):
+  
+app/controllers/api/transactions_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-02 18:08:56 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+  [1m[36mTransaction Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` WHERE (date = '2017-7-30') LIMIT 1[0m
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-02 18:08:58 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` WHERE (date = '2017-7-30') LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-02 18:09:13 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` WHERE (date = '2017-8-1') LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-02 18:09:15 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` WHERE (date = '2017-8-1') LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-02 18:09:17 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` WHERE (date = '2017-8-1') LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-03 06:45:31 -0400
+  [1m[35m (24.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+  [1m[36mTransaction Exists (5.9ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` WHERE (date = '2017-8-1') LIMIT 1[0m
+  [1m[36mTransaction Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` WHERE (date = '2017-8-1') LIMIT 1[0m
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (date = '2017-8-1') ORDER BY date DESC[0m
+Completed 200 OK in 46ms (Views: 1.0ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-03 07:06:06 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `div' for "30":String):
+  
+app/controllers/api/transactions_controller.rb:71:in `new'
+app/controllers/api/transactions_controller.rb:71:in `initDate'
+app/controllers/api/transactions_controller.rb:10:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-03 07:10:33 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+  [1m[36mTransaction Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` WHERE (`transactions`.`date` >= '2017-07-30' AND `transactions`.`date` < '2017-08-01') LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-03 07:10:35 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+  [1m[36mTransaction Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` WHERE (`transactions`.`date` >= '2017-07-30' AND `transactions`.`date` < '2017-08-01') LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-03 07:11:11 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-01') LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-01') LIMIT 1[0m  [["date", "2017-07-30"], ["date", "2017-08-01"], ["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-01') ORDER BY date DESC[0m
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/line_graphs" for 127.0.0.1 at 2017-08-03 07:51:05 -0400
+Processing by Api::LineGraphsController#index as HTML
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: start_date):
+  
+app/controllers/api/line_graphs_controller.rb:46:in `start_date'
+app/controllers/api/line_graphs_controller.rb:9:in `index'
+Started GET "/api/line_graphs" for 127.0.0.1 at 2017-08-03 07:52:23 -0400
+Processing by Api::LineGraphsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::LineGraphsController::LineGraphs):
+  
+app/controllers/api/line_graphs_controller.rb:17:in `index'
+Started GET "/api/line_graphs" for 127.0.0.1 at 2017-08-03 07:55:45 -0400
+Processing by Api::LineGraphsController#index as HTML
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 19.2ms)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/serializers/api/line_graph_serializer.rb:9:in `block in <class:LineGraphSerializer>'
+app/controllers/api/line_graphs_controller.rb:21:in `index'
+Started GET "/api/line_graphs" for 127.0.0.1 at 2017-08-03 07:57:21 -0400
+Processing by Api::LineGraphsController#index as HTML
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 16ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+
+
