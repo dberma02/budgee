@@ -23,11 +23,15 @@ module Api
 
     def create
       #need to make this create all transactions in a loop
-      Transaction.stubData(_params)
-      transactions = Transaction.new(_params)
-      transactions = Transaction.stubData(transactions)
-      if transactions.save
-        render json: transactions, status: 201
+      status = batchCreate
+      
+      if status == "success"
+        #okay to do this here bc before they get rendered, will have to go through
+        #decorator which will insert stub data
+        #
+        #figure out how to do response here
+        #can either not send the confirmation or pass an array of the objects to be serialized
+        render json: { status: 201 }
       else
         respond_with_errors(transactions)
       end
@@ -46,9 +50,9 @@ module Api
     end
 
     private
-    def _params
+    def createParams
       #  its bc you were putting in the data not in JSON format...
-      params.require(:data).permit(attributes: [:debit, :credit, :location, :date, :balance, :category, :name])
+      params.require(:data).permit(attributes: [:debit, :credit, :location, :date, :balance, :category, :name, :description])
     end
 
     def date_range_params
@@ -68,6 +72,16 @@ module Api
     def respond_with_errors(object)
       render json: {"DANIEL":"BERMAN"}
       render json: {errors: ErrorSerializer.serialize(object)}, status: :unprocessable_entity
+    end
+
+    def batchCreate
+      createParams[:attributes].each do |transaction|
+        Transaction.create(transaction)
+#       unless transaction.save
+#         return "error" 
+#       end
+      end
+      return "success"
     end
 
   end

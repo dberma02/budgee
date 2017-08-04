@@ -1,16 +1,13 @@
 class Transaction < ApplicationRecord
-  
-  def self.stubData(transactions)
+  before_save :parseLocation
+   
+  def self.stubData(transactionsData)
     binding.pry
-    transactions[:attributes].each do |transaction|
-      newT = Transaction.new(transaction)
-      newT = parseLocation(newT)
-      Transaction.save(newT)
-    end
   end
 
   #need to update model to have a description to parse
-  def self.parseLocation(transaction)
+  def parseLocation
+    dat = self.description.split(/POS/)
     binding.pry
   end
 

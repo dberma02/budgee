@@ -6,8 +6,9 @@ class CreateTransactions < ActiveRecord::Migration[5.1]
       t.float :balance
       t.date :date
       t.string :name
-      t.text :location
+      t.string :location
       t.string :category
+      t.text :description
 
       t.timestamps
     end

@@ -18,8 +18,9 @@ ActiveRecord::Schema.define(version: 20170801011017) do
     t.float "balance", limit: 24
     t.date "date"
     t.string "name"
-    t.text "location"
+    t.string "location"
     t.string "category"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

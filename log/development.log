@@ -2620,3 +2620,449 @@ app/models/transaction.rb:8:in `block in stubData'
 app/models/transaction.rb:5:in `each'
 app/models/transaction.rb:5:in `stubData'
 app/controllers/api/transactions_controller.rb:26:in `create'
+  [1m[35m (41.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (11.5ms)[0m  [1m[34mSELECT GET_LOCK(5465682076396480995, 0)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK(5465682076396480995)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `transactions`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'transactions'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(5465682076396480995, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK(5465682076396480995)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `transactions`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'transactions'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(5465682076396480995, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTransactions (20170801011017)
+  [1m[35m (39.2ms)[0m  [1m[35mDROP TABLE `transactions`[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170801011017'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(5465682076396480995)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(5465682076396480995, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTransactions (20170801011017)
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE `transactions` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `debit` float, `credit` float, `balance` float, `date` date, `name` varchar(255), `location` varchar(255), `category` varchar(255), `description` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170801011017')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK(5465682076396480995)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `transactions`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'transactions'[0m
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:25:33 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:87: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/api/transactions_controller.rb:87: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:26:16 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "name"=>"Starbucks", "location"=>"NYC", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "name"=>"Phebs", "location"=>"NYC", "category"=>"Bars"}]}, "transaction"=>{}}
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `_params' for #<Api::TransactionsController:0x007fb305f4fb40>
+Did you mean?  params
+               params=):
+  
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:26:42 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "name"=>"Starbucks", "location"=>"NYC", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "name"=>"Phebs", "location"=>"NYC", "category"=>"Bars"}]}, "transaction"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/transactions_controller.rb:73:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:27:11 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "name"=>"Starbucks", "location"=>"NYC", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "name"=>"Phebs", "location"=>"NYC", "category"=>"Bars"}]}, "transaction"=>{}}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `save' for #<Class:0x007fb305deca28>):
+  
+app/controllers/api/transactions_controller.rb:76:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:29:47 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "name"=>"Starbucks", "location"=>"NYC", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "name"=>"Phebs", "location"=>"NYC", "category"=>"Bars"}]}, "transaction"=>{}}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `save' for #<Class:0x007fb309128270>):
+  
+app/controllers/api/transactions_controller.rb:76:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:30:34 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "name"=>"Starbucks", "location"=>"NYC", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "name"=>"Phebs", "location"=>"NYC", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `parseLocation' for #<Transaction:0x007fb3073f8cb8>):
+  
+app/controllers/api/transactions_controller.rb:76:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:31:07 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "name"=>"Starbucks", "location"=>"NYC", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "name"=>"Phebs", "location"=>"NYC", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/models/transaction.rb:9:in `parseLocation'
+app/controllers/api/transactions_controller.rb:76:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:31:36 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "name"=>"Starbucks", "location"=>"NYC", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "name"=>"Phebs", "location"=>"NYC", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+LocalJumpError (no block given (yield)):
+  
+app/models/transaction.rb:10:in `parseLocation'
+app/controllers/api/transactions_controller.rb:76:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:32:01 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "name"=>"Starbucks", "location"=>"NYC", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "name"=>"Phebs", "location"=>"NYC", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `parseLocation' for #<Transaction:0x007fb3060b32e8>):
+  
+app/controllers/api/transactions_controller.rb:76:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:35:17 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "name"=>"Starbucks", "location"=>"NYC", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "name"=>"Phebs", "location"=>"NYC", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.3ms)
+
+
+  
+LocalJumpError (no block given (yield)):
+  
+app/models/transaction.rb:10:in `parseLocation'
+app/controllers/api/transactions_controller.rb:76:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:36:49 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "name"=>"Starbucks", "location"=>"NYC", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "name"=>"Phebs", "location"=>"NYC", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `location`, `category`, `created_at`, `updated_at`) VALUES (20.0, 3642.14, '2017-08-02', 'Starbucks', 'NYC', 'Cafe', '2017-08-04 11:37:33', '2017-08-04 11:37:33')[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `location`, `category`, `created_at`, `updated_at`) VALUES (50.0, 3600.14, '2017-08-02', 'Phebs', 'NYC', 'Bars', '2017-08-04 11:37:36', '2017-08-04 11:37:36')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 47086ms (ActiveRecord: 4.2ms)
+
+
+  
+NameError (undefined local variable or method `transactions' for #<Api::TransactionsController:0x007fb3060e72a0>):
+  
+app/controllers/api/transactions_controller.rb:30:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:40:24 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{"data":{"attributes":[{"debit":20.00,"credit":null,"balance":3642.14,"date": "2017-8-2","name":"","location":"","description":"BAR TORO                      POS     NEW YORK      NY US        000019","category": "Cafe"},{"debit":50.00,"credit":null,"balance":3600.14,"date": "2017-8-2","name":"","location":"","description":"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049",category": "Bars"}]}}
+  
+ActionDispatch::Http::Parameters::ParseError (409: unexpected token at '{"debit":50.00,"credit":null,"balance":3600.14,"date": "2017-8-2","name":"","location":"","description":"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049",category": "Bars"}]}}'):
+  
+actionpack (5.1.2) lib/action_dispatch/http/parameters.rb:113:in `rescue in parse_formatted_parameters'
+actionpack (5.1.2) lib/action_dispatch/http/parameters.rb:107:in `parse_formatted_parameters'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:358:in `block in POST'
+rack (2.0.3) lib/rack/request.rb:57:in `fetch'
+rack (2.0.3) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:357:in `POST'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:286:in `_wrapper_enabled?'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:235:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:42:49 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'description' for Transaction.):
+  
+app/controllers/api/transactions_controller.rb:75:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:44:14 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.5ms)
+
+
+  
+LocalJumpError (no block given (yield)):
+  
+app/models/transaction.rb:10:in `parseLocation'
+app/controllers/api/transactions_controller.rb:76:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:45:17 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+
+  
+LocalJumpError (no block given (yield)):
+  
+app/models/transaction.rb:10:in `parseLocation'
+app/controllers/api/transactions_controller.rb:76:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:46:45 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 14521ms (ActiveRecord: 0.3ms)
+
+
+  
+LocalJumpError (no block given (yield)):
+  
+app/models/transaction.rb:10:in `parseLocation'
+app/controllers/api/transactions_controller.rb:77:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:47:16 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 16411ms (ActiveRecord: 0.4ms)
+
+
+  
+LocalJumpError (no block given (yield)):
+  
+app/models/transaction.rb:10:in `parseLocation'
+app/controllers/api/transactions_controller.rb:78:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:48:00 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+Completed 500 Internal Server Error in 3126ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `new' for nil:NilClass):
+  
+app/controllers/api/transactions_controller.rb:76:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:50:01 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 5808ms (ActiveRecord: 0.4ms)
+
+
+  
+LocalJumpError (no block given (yield)):
+  
+app/models/transaction.rb:10:in `parseLocation'
+app/controllers/api/transactions_controller.rb:78:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:55:01 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 4783ms (ActiveRecord: 0.3ms)
+
+
+  
+LocalJumpError (no block given (yield)):
+  
+app/models/transaction.rb:10:in `parseLocation'
+app/controllers/api/transactions_controller.rb:78:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 07:56:13 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 375409ms (ActiveRecord: 1.4ms)
+
+
+  
+LocalJumpError (no block given (yield)):
+  
+app/models/transaction.rb:10:in `parseLocation'
+app/controllers/api/transactions_controller.rb:78:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:74:in `each'
+app/controllers/api/transactions_controller.rb:74:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 08:02:31 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+Completed   in 52031ms (ActiveRecord: 1.5ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 08:03:30 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `category`, `description`, `created_at`, `updated_at`) VALUES (20.0, 3642.14, '2017-08-02', 'Cafe', 'BAR TORO                      POS     NEW YORK      NY US        000019', '2017-08-04 12:04:06', '2017-08-04 12:04:06')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `category`, `description`, `created_at`, `updated_at`) VALUES (20.0, 3642.14, '2017-08-02', 'Cafe', 'BAR TORO                      POS     NEW YORK      NY US        000019', '2017-08-04 12:04:44', '2017-08-04 12:04:44')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `category`, `description`, `created_at`, `updated_at`) VALUES (50.0, 3600.14, '2017-08-02', 'Bars', 'POTBELLY #289                 POS     JERSEY CITY   NJ US        000049', '2017-08-04 12:04:57', '2017-08-04 12:04:57')[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 87222ms (ActiveRecord: 10.2ms)
+
+
+  
+NameError (undefined local variable or method `transactions' for #<Api::TransactionsController:0x007ff796604240>):
+  
+app/controllers/api/transactions_controller.rb:30:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 08:07:53 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:34: syntax error, unexpected tLABEL
+        render json: status: 201
+                            ^):
+  
+app/controllers/api/transactions_controller.rb:34: syntax error, unexpected tLABEL
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-04 08:08:58 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `category`, `description`, `created_at`, `updated_at`) VALUES (20.0, 3642.14, '2017-08-02', 'Cafe', 'BAR TORO                      POS     NEW YORK      NY US        000019', '2017-08-04 12:09:02', '2017-08-04 12:09:02')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `category`, `description`, `created_at`, `updated_at`) VALUES (50.0, 3600.14, '2017-08-02', 'Bars', 'POTBELLY #289                 POS     JERSEY CITY   NJ US        000049', '2017-08-04 12:09:04', '2017-08-04 12:09:04')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 6012ms (Views: 0.2ms | ActiveRecord: 4.4ms)
+
+
