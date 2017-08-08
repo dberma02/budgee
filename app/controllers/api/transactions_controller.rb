@@ -3,16 +3,14 @@ module Api
     require 'pry-rails'
     include ErrorSerializer
 
-    #actually works okay to test with plain URL
-    #date parse works here...not that this is where it should stay
     def index
       if(start_date && end_date)
-        puts "recieved params"
         start_d = DateTime.parse(start_date)
         end_d = DateTime.parse(end_date)
-        transactions = Transaction.where(date: start_d..end_d).order('date DESC')
+
+        transactions = Transaction.stubData(start_d, end_d)
       else
-        transactions = Transaction.order('date DESC')
+#        transactions = Transaction.order('date DESC')
       end
       render json: JSONAPI::Serializer.serialize(
         transactions,
@@ -22,15 +20,9 @@ module Api
      end
 
     def create
-      #need to make this create all transactions in a loop
       status = batchCreate
       
       if status == "success"
-        #okay to do this here bc before they get rendered, will have to go through
-        #decorator which will insert stub data
-        #
-        #figure out how to do response here
-        #can either not send the confirmation or pass an array of the objects to be serialized
         render json: { status: 201 }
       else
         respond_with_errors(transactions)
@@ -49,9 +41,7 @@ module Api
 
     end
 
-    private
     def createParams
-      #  its bc you were putting in the data not in JSON format...
       params.require(:data).permit(attributes: [:debit, :credit, :location, :date, :balance, :category, :name, :description])
     end
 
@@ -70,12 +60,21 @@ module Api
     end
 
     def respond_with_errors(object)
-      render json: {"DANIEL":"BERMAN"}
       render json: {errors: ErrorSerializer.serialize(object)}, status: :unprocessable_entity
+    end
+
+    def parseDate(dateString)
+      dateData = dateString.split('/')
+      year = dateData[2].sub(/^/,"20").to_i
+      month = dateData[0].to_i
+      day = dateData[1].to_i
+      date = Date.new(year, month, day)
     end
 
     def batchCreate
       createParams[:attributes].each do |transaction|
+        transaction[:date] = parseDate(transaction[:date])
+        binding.pry
         Transaction.create(transaction)
 #       unless transaction.save
 #         return "error" 

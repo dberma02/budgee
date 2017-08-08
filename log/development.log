@@ -3066,3 +3066,1981 @@ Processing by Api::TransactionsController#create as */*
 Completed 200 OK in 6012ms (Views: 0.2ms | ActiveRecord: 4.4ms)
 
 
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:10:15 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (174.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (59.5ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `category`, `description`, `created_at`, `updated_at`) VALUES (20.0, 3642.14, '2017-08-02', 'Cafe', 'BAR TORO                      POS     NEW YORK      NY US        000019', '2017-08-06 17:10:28', '2017-08-06 17:10:28')[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `category`, `description`, `created_at`, `updated_at`) VALUES (50.0, 3600.14, '2017-08-02', 'Bars', 'POTBELLY #289                 POS     JERSEY CITY   NJ US        000049', '2017-08-06 17:11:02', '2017-08-06 17:11:02')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 47096ms (Views: 1.3ms | ActiveRecord: 239.4ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:13:12 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (12.7ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `category`, `description`, `created_at`, `updated_at`) VALUES (20.0, 3642.14, '2017-08-02', 'Cafe', 'BAR TORO                      POS     NEW YORK      NY US        000019', '2017-08-06 17:13:56', '2017-08-06 17:13:56')[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `category`, `description`, `created_at`, `updated_at`) VALUES (50.0, 3600.14, '2017-08-02', 'Bars', 'POTBELLY #289                 POS     JERSEY CITY   NJ US        000049', '2017-08-06 17:13:57', '2017-08-06 17:13:57')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 45221ms (Views: 0.2ms | ActiveRecord: 21.0ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:15:46 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `category`, `description`, `created_at`, `updated_at`) VALUES (20.0, 3642.14, '2017-08-02', '', 'Cafe', 'BAR TORO                      POS     NEW YORK      NY US        000019', '2017-08-06 17:16:55', '2017-08-06 17:16:55')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `category`, `description`, `created_at`, `updated_at`) VALUES (50.0, 3600.14, '2017-08-02', '', 'Bars', 'POTBELLY #289                 POS     JERSEY CITY   NJ US        000049', '2017-08-06 17:16:57', '2017-08-06 17:16:57')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 70731ms (Views: 0.3ms | ActiveRecord: 74.6ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:20:17 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `category`, `description`, `created_at`, `updated_at`) VALUES (20.0, 3642.14, '2017-08-02', 'BAR TORO', 'Cafe', 'BAR TORO                      POS     NEW YORK      NY US        000019', '2017-08-06 17:21:50', '2017-08-06 17:21:50')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `category`, `description`, `created_at`, `updated_at`) VALUES (50.0, 3600.14, '2017-08-02', 'POTBELLY', 'Bars', 'POTBELLY #289                 POS     JERSEY CITY   NJ US        000049', '2017-08-06 17:21:51', '2017-08-06 17:21:51')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 94473ms (Views: 0.3ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:21:56 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `category`, `description`, `created_at`, `updated_at`) VALUES (20.0, 3642.14, '2017-08-02', 'BAR TORO', 'Cafe', 'BAR TORO                      POS     NEW YORK      NY US        000019', '2017-08-06 17:24:57', '2017-08-06 17:24:57')[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `category`, `description`, `created_at`, `updated_at`) VALUES (50.0, 3600.14, '2017-08-02', 'POTBELLY', 'Bars', 'POTBELLY #289                 POS     JERSEY CITY   NJ US        000049', '2017-08-06 17:24:58', '2017-08-06 17:24:58')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 182154ms (Views: 0.3ms | ActiveRecord: 8.3ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:25:00 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `category`, `description`, `created_at`, `updated_at`) VALUES (20.0, 3642.14, '2017-08-02', 'BAR TORO', 'Cafe', 'BAR TORO                      POS     NEW YORK      NY US        000019', '2017-08-06 17:27:35', '2017-08-06 17:27:35')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `category`, `description`, `created_at`, `updated_at`) VALUES (50.0, 3600.14, '2017-08-02', 'POTBELLY', 'Bars', 'POTBELLY #289                 POS     JERSEY CITY   NJ US        000049', '2017-08-06 17:27:37', '2017-08-06 17:27:37')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 156628ms (Views: 0.2ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:27:39 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `category`, `description`, `created_at`, `updated_at`) VALUES (20.0, 3642.14, '2017-08-02', 'BAR TORO', 'Cafe', 'BAR TORO                      POS     NEW YORK      NY US        000019', '2017-08-06 17:27:57', '2017-08-06 17:27:57')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `category`, `description`, `created_at`, `updated_at`) VALUES (50.0, 3600.14, '2017-08-02', 'POTBELLY', 'Bars', 'POTBELLY #289                 POS     JERSEY CITY   NJ US        000049', '2017-08-06 17:27:58', '2017-08-06 17:27:58')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 19362ms (Views: 0.2ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:28:00 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `category`, `description`, `created_at`, `updated_at`) VALUES (20.0, 3642.14, '2017-08-02', 'BAR TORO', 'Cafe', 'BAR TORO                      POS     NEW YORK      NY US        000019', '2017-08-06 17:28:02', '2017-08-06 17:28:02')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `category`, `description`, `created_at`, `updated_at`) VALUES (50.0, 3600.14, '2017-08-02', 'POTBELLY', 'Bars', 'POTBELLY #289                 POS     JERSEY CITY   NJ US        000049', '2017-08-06 17:34:13', '2017-08-06 17:34:13')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 373488ms (Views: 0.2ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:34:17 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/models/transaction.rb:18:in `reverse'
+app/models/transaction.rb:18:in `parseLocation'
+app/controllers/api/transactions_controller.rb:79:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:78:in `each'
+app/controllers/api/transactions_controller.rb:78:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:34:43 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>20.0, "credit"=>nil, "balance"=>3642.14, "date"=>"2017-8-2", "description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "category"=>"Cafe"}, {"debit"=>50.0, "credit"=>nil, "balance"=>3600.14, "date"=>"2017-8-2", "description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `category`, `description`, `created_at`, `updated_at`) VALUES (20.0, 3642.14, '2017-08-02', 'BAR TORO', 'Cafe', 'BAR TORO                      POS     NEW YORK      NY US        000019', '2017-08-06 17:35:05', '2017-08-06 17:35:05')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `category`, `description`, `created_at`, `updated_at`) VALUES (50.0, 3600.14, '2017-08-02', 'POTBELLY', 'Bars', 'POTBELLY #289                 POS     JERSEY CITY   NJ US        000049', '2017-08-06 17:35:11', '2017-08-06 17:35:11')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 27876ms (Views: 0.2ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:40:28 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"ChkRef"=>"", "Debit"=>9.62, "Credit"=>"", "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}, {"ChkRef"=>"", "Debit"=>"", "Credit"=>1119.42, "Balance"=>2651.76, "Date"=>"6/30/17", "Description"=>"DATAPIPE INC DIRECT DEP PPD", "Category"=>"Income"}, {"ChkRef"=>"", "Debit"=>6.84, "Credit"=>"", "Balance"=>1532.34, "Date"=>"6/29/17", "Description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000049", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>11.53, "Credit"=>"", "Balance"=>1539.18, "Date"=>"6/27/17", "Description"=>"OMO MANHATTAN FARME           POS     NEW YORK      NY US        235916", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>28.38, "Credit"=>"", "Balance"=>1550.71, "Date"=>"6/26/17", "Description"=>"NationalGrid NatlGrid WEB", "Category"=>"Utilities"}, {"ChkRef"=>"", "Debit"=>8.54, "Credit"=>"", "Balance"=>1579.09, "Date"=>"6/26/17", "Description"=>"SQU*SQ *FRESH HEALTHY         POS     Jersey City   NJ US        000005", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>10, "Credit"=>"", "Balance"=>1587.63, "Date"=>"6/26/17", "Description"=>"HUMAN RIGHTS CAM-CANV         POS     WASHINGTON    DC US        000000", "Category"=>"Donations"}, {"ChkRef"=>"", "Debit"=>19.55, "Credit"=>"", "Balance"=>1597.63, "Date"=>"6/26/17", "Description"=>"NYCTAXI5M89                   POS     WOODSIDE      NY US        000064", "Category"=>"Transportation"}, {"ChkRef"=>"", "Debit"=>25, "Credit"=>"", "Balance"=>1617.18, "Date"=>"6/26/17", "Description"=>"MONK VINTAGE                  POS     BROOKLYN      NY US        000002", "Category"=>"Clothes"}, {"ChkRef"=>"", "Debit"=>12, "Credit"=>"", "Balance"=>1642.18, "Date"=>"6/26/17", "Description"=>"11 HOWARD F AND B             POS     NEW YORK      NY US        000005", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>12.35, "Credit"=>"", "Balance"=>1654.18, "Date"=>"6/26/17", "Description"=>"NYCTAXI4M30                   POS     BROOKLYN      NY US        000000", "Category"=>"Transportation"}, {"ChkRef"=>"", "Debit"=>60.09, "Credit"=>"", "Balance"=>1666.53, "Date"=>"6/26/17", "Description"=>"BAR TORO                      POS     NEW YORK      NY US        000019", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>65.25, "Credit"=>"", "Balance"=>1726.62, "Date"=>"6/26/17", "Description"=>"MORTON WILLIAMS               POS     NEW YORK      NY US        065066", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>7.48, "Credit"=>"", "Balance"=>1791.87, "Date"=>"6/24/17", "Description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000076", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>3, "Credit"=>"", "Balance"=>1799.35, "Date"=>"6/24/17", "Description"=>"TERMINAL SURCHARGE", "Category"=>"ATM Fee"}, {"ChkRef"=>"", "Debit"=>60, "Credit"=>"", "Balance"=>1802.35, "Date"=>"6/24/17", "Description"=>"90 KENT AVE                   ATM     BROOKLYN      NY US        008715", "Category"=>"Cash"}, {"ChkRef"=>"", "Debit"=>31.85, "Credit"=>"", "Balance"=>1862.35, "Date"=>"6/23/17", "Description"=>"LA PECORA BIANCA              POS     NEW YORK      NY US        000048", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>15.36, "Credit"=>"", "Balance"=>1894.2, "Date"=>"6/22/17", "Description"=>"TAXI SVC ASTORIA              POS     LONG IS CITY  NY US        000000", "Category"=>"Transportation"}, {"ChkRef"=>"", "Debit"=>22.51, "Credit"=>"", "Balance"=>1909.56, "Date"=>"6/22/17", "Description"=>"THE MALT HOUSE FINANCI        POS     NEW YORK      NY US        000006", "Category"=>"Bars"}, {"ChkRef"=>"", "Debit"=>12.89, "Credit"=>"", "Balance"=>1932.07, "Date"=>"6/22/17", "Description"=>"LOUIS                         POS     NEW YORK      NY US        000009", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>7.62, "Credit"=>"", "Balance"=>1944.96, "Date"=>"6/22/17", "Description"=>"SQUARE *SQ *TARTINERY         POS     Brooklyn      NY US        000000", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>6.84, "Credit"=>"", "Balance"=>1952.58, "Date"=>"6/22/17", "Description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000017", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>11.16, "Credit"=>"", "Balance"=>1959.42, "Date"=>"6/22/17", "Description"=>"VERITABLE                     POS     NEW YORK      NY US        000037", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>4.13, "Credit"=>"", "Balance"=>1970.58, "Date"=>"6/21/17", "Description"=>"PRET MANAGER 0045             POS     NEW YORK      NY US        000005", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>7.48, "Credit"=>"", "Balance"=>1974.71, "Date"=>"6/21/17", "Description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000007", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>15.05, "Credit"=>"", "Balance"=>1982.19, "Date"=>"6/21/17", "Description"=>"WALL FLOWER                   POS     NEW YORK      NY US        000001", "Category"=>"Bars"}, {"ChkRef"=>"", "Debit"=>86.22, "Credit"=>"", "Balance"=>1997.24, "Date"=>"6/20/17", "Description"=>"TST* BOQUERIA - FLATIR        POS     NEW YORK      NY US        000000", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>7.48, "Credit"=>"", "Balance"=>2083.46, "Date"=>"6/20/17", "Description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000075", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>4.3, "Credit"=>"", "Balance"=>2090.94, "Date"=>"6/19/17", "Description"=>"STARBUCKS STORE 18509         POS     NEW YORK      NY US        000051", "Category"=>"Caf_"}, {"ChkRef"=>"", "Debit"=>17.1, "Credit"=>"", "Balance"=>2095.24, "Date"=>"6/19/17", "Description"=>"KOREAN EXPRESS - NY           POS     NEW YORK      NY US        000094", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>7.43, "Credit"=>"", "Balance"=>2112.34, "Date"=>"6/19/17", "Description"=>"GREENWICH SALAD COMPAN        POS     GREENWICH     CT US        000000", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>9.25, "Credit"=>"", "Balance"=>2119.77, "Date"=>"6/19/17", "Description"=>"FP BAKERY                     POS     NEW YORK      NY US        000183", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>96, "Credit"=>"", "Balance"=>2129.02, "Date"=>"6/19/17", "Description"=>"MONARCH ROOFTOP LOUNGE        POS     NEW YORK      NY US        000093", "Category"=>"Bars"}, {"ChkRef"=>"", "Debit"=>18.61, "Credit"=>"", "Balance"=>2225.02, "Date"=>"6/19/17", "Description"=>"SWEET PEAS BAKING COMP        POS     OLD GREENWICH CT US        000010", "Category"=>"Bars"}, {"ChkRef"=>"", "Debit"=>7.48, "Credit"=>"", "Balance"=>2243.63, "Date"=>"6/17/17", "Description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000007", "Category"=>"Bars"}, {"ChkRef"=>"", "Debit"=>1.5, "Credit"=>"", "Balance"=>2251.11, "Date"=>"6/17/17", "Description"=>"TERMINAL SURCHARGE", "Category"=>"ATM Fee"}, {"ChkRef"=>"", "Debit"=>60, "Credit"=>"", "Balance"=>2252.61, "Date"=>"6/17/17", "Description"=>"375 GREENWICH AVE             ATM     GREENWICH     CT US        001750", "Category"=>"Cash"}, {"ChkRef"=>"", "Debit"=>51.19, "Credit"=>"", "Balance"=>2312.61, "Date"=>"6/16/17", "Description"=>"ARIA WINE BAR                 POS     NEW YORK      NY US        000000", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>8.87, "Credit"=>"", "Balance"=>2363.8, "Date"=>"6/16/17", "Description"=>"SWEETGREEN 61ST + LEX         POS     NEW YORK      NY US        000036", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>8.55, "Credit"=>"", "Balance"=>2372.67, "Date"=>"6/15/17", "Description"=>"POTBELLY #289                 POS     JERSEY CITY   NJ US        000000", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>9.08, "Credit"=>"", "Balance"=>2381.22, "Date"=>"6/15/17", "Description"=>"SALSARITAS 134 JERSEY         POS     JERSEY CITY   NJ US        000051", "Category"=>"Restaurants"}, {"ChkRef"=>145, "Debit"=>2460, "Credit"=>"", "Balance"=>2390.3, "Date"=>"6/14/17", "Description"=>"CHECK NUMBER", "Category"=>"Rent"}, {"ChkRef"=>"", "Debit"=>67.2, "Credit"=>"", "Balance"=>4850.3, "Date"=>"6/14/17", "Description"=>"NWS STAPLES 0193              POS     NEW YORK      NY US        007195", "Category"=>"Home Goods"}, {"ChkRef"=>"", "Debit"=>8.8, "Credit"=>"", "Balance"=>4917.5, "Date"=>"6/13/17", "Description"=>"TAXI SVC LONG ISLAND C        POS     LONG IS CITY  NY US        000009", "Category"=>"Transportation"}, {"ChkRef"=>"", "Debit"=>43.29, "Credit"=>"", "Balance"=>4926.3, "Date"=>"6/13/17", "Description"=>"JACKS WIFE FREDA              POS     NEW YORK      NY US        000000", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>6.37, "Credit"=>"", "Balance"=>4969.59, "Date"=>"6/7/17", "Description"=>"NEW ENGLAND SOUP FACTO        POS     NEWTON        MA US        000000", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>"", "Credit"=>810, "Balance"=>4975.96, "Date"=>"6/5/17", "Description"=>"MOBILE DEPOSIT", "Category"=>"Reimbursement"}, {"ChkRef"=>"", "Debit"=>"", "Credit"=>800, "Balance"=>4165.96, "Date"=>"6/5/17", "Description"=>"MOBILE DEPOSIT", "Category"=>"Reimbursement"}, {"ChkRef"=>"", "Debit"=>3.5, "Credit"=>"", "Balance"=>3365.96, "Date"=>"6/3/17", "Description"=>"TERMINAL SURCHARGE", "Category"=>"ATM Fee"}, {"ChkRef"=>"", "Debit"=>40, "Credit"=>"", "Balance"=>3369.46, "Date"=>"6/3/17", "Description"=>"425 ATTUCKS LANE              ATM     HYANNIS       MA US        000092", "Category"=>"Cash"}, {"ChkRef"=>"", "Debit"=>2.41, "Credit"=>"", "Balance"=>3409.46, "Date"=>"6/2/17", "Description"=>"STARBUCKS STORE 00835         POS     WABAN         MA US        000009", "Category"=>"Caf_"}, {"ChkRef"=>"", "Debit"=>15.46, "Credit"=>"", "Balance"=>3411.87, "Date"=>"6/2/17", "Description"=>"SHELL Service St              POS     PEMBROKE      MA US        415684", "Category"=>"Gas"}, {"ChkRef"=>"", "Debit"=>7.28, "Credit"=>"", "Balance"=>3427.33, "Date"=>"6/2/17", "Description"=>"CHIPOTLE 1250                 POS     NEWTON        MA US        000038", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>4.82, "Credit"=>"", "Balance"=>3434.61, "Date"=>"6/2/17", "Description"=>"JP LICKS AT NEWTON            POS     NEWTON CENTER MA US        000072", "Category"=>"Restaurants"}, {"ChkRef"=>"", "Debit"=>"", "Credit"=>830, "Balance"=>3439.43, "Date"=>"6/2/17", "Description"=>"MOBILE DEPOSIT", "Category"=>"Reimbursement"}, {"ChkRef"=>"", "Debit"=>"", "Credit"=>80, "Balance"=>2609.43, "Date"=>"6/1/17", "Description"=>"INTERNET  TFR FRM CHK  4190014508", "Category"=>"Income"}]}, "transaction"=>{}}
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/models/transaction.rb:10:in `parseLocation'
+app/controllers/api/transactions_controller.rb:79:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:78:in `each'
+app/controllers/api/transactions_controller.rb:78:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:43:02 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"{\"data\":{\"attributes\":"=>{"{\"ChkRef\": \"\",\"Debit\": 9.62,\"Credit\": \"\",\"Balance\": 2642.14,\"Date\": \"6/30/17\",\"Description\": \"PIER 66 MARITIME              POS     NEW YORK      NY US        000075\",\"Category\": \"Bars\"},{\"ChkRef\": \"\",\"Debit\": \"\",\"Credit\": 1119.42,\"Balance\": 2651.76,\"Date\": \"6/30/17\",\"Description\": \"DATAPIPE INC DIRECT DEP PPD\",\"Category\": \"Income\"}"=>{"}}"=>nil}}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:55:in `createParams'
+app/controllers/api/transactions_controller.rb:78:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:43:03 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"{\"data\":{\"attributes\":"=>{"{\"ChkRef\": \"\",\"Debit\": 9.62,\"Credit\": \"\",\"Balance\": 2642.14,\"Date\": \"6/30/17\",\"Description\": \"PIER 66 MARITIME              POS     NEW YORK      NY US        000075\",\"Category\": \"Bars\"},{\"ChkRef\": \"\",\"Debit\": \"\",\"Credit\": 1119.42,\"Balance\": 2651.76,\"Date\": \"6/30/17\",\"Description\": \"DATAPIPE INC DIRECT DEP PPD\",\"Category\": \"Income\"}"=>{"}}"=>nil}}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/api/transactions_controller.rb:55:in `createParams'
+app/controllers/api/transactions_controller.rb:78:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:43:20 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"ChkRef"=>"", "Debit"=>9.62, "Credit"=>"", "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}, {"ChkRef"=>"", "Debit"=>"", "Credit"=>1119.42, "Balance"=>2651.76, "Date"=>"6/30/17", "Description"=>"DATAPIPE INC DIRECT DEP PPD", "Category"=>"Income"}]}, "transaction"=>{}}
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/models/transaction.rb:10:in `parseLocation'
+app/controllers/api/transactions_controller.rb:79:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:78:in `each'
+app/controllers/api/transactions_controller.rb:78:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:44:37 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"ChkRef"=>"", "Debit"=>9.62, "Credit"=>"", "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}, {"ChkRef"=>"", "Debit"=>"", "Credit"=>1119.42, "Balance"=>2651.76, "Date"=>"6/30/17", "Description"=>"DATAPIPE INC DIRECT DEP PPD", "Category"=>"Income"}]}, "transaction"=>{}}
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 40071ms (ActiveRecord: 2.0ms)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/models/transaction.rb:11:in `parseLocation'
+app/controllers/api/transactions_controller.rb:79:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:78:in `each'
+app/controllers/api/transactions_controller.rb:78:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:45:19 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"ChkRef"=>"", "Debit"=>9.62, "Credit"=>"", "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}, {"ChkRef"=>"", "Debit"=>"", "Credit"=>1119.42, "Balance"=>2651.76, "Date"=>"6/30/17", "Description"=>"DATAPIPE INC DIRECT DEP PPD", "Category"=>"Income"}]}, "transaction"=>{}}
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 53998ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/models/transaction.rb:11:in `parseLocation'
+app/controllers/api/transactions_controller.rb:80:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:79:in `each'
+app/controllers/api/transactions_controller.rb:79:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:46:15 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"ChkRef"=>"", "Debit"=>9.62, "Credit"=>"", "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}, {"ChkRef"=>"", "Debit"=>"", "Credit"=>1119.42, "Balance"=>2651.76, "Date"=>"6/30/17", "Description"=>"DATAPIPE INC DIRECT DEP PPD", "Category"=>"Income"}]}, "transaction"=>{}}
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 87479ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/models/transaction.rb:11:in `parseLocation'
+app/controllers/api/transactions_controller.rb:80:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:79:in `each'
+app/controllers/api/transactions_controller.rb:79:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:47:45 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"ChkRef"=>"", "Debit"=>9.62, "Credit"=>"", "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}, {"ChkRef"=>"", "Debit"=>"", "Credit"=>1119.42, "Balance"=>2651.76, "Date"=>"6/30/17", "Description"=>"DATAPIPE INC DIRECT DEP PPD", "Category"=>"Income"}]}, "transaction"=>{}}
+Completed 500 Internal Server Error in 11396ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'ChkRef' for Transaction.):
+  
+app/controllers/api/transactions_controller.rb:80:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:79:in `each'
+app/controllers/api/transactions_controller.rb:79:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:49:10 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"Debit"=>9.62, "Credit"=>"", "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}, {"Debit"=>"", "Credit"=>1119.42, "Balance"=>2651.76, "Date"=>"6/30/17", "Description"=>"DATAPIPE INC DIRECT DEP PPD", "Category"=>"Income"}]}, "transaction"=>{}}
+Completed 500 Internal Server Error in 4191ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'Debit' for Transaction.):
+  
+app/controllers/api/transactions_controller.rb:80:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:79:in `each'
+app/controllers/api/transactions_controller.rb:79:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:50:35 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>"", "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}, {"debit"=>"", "credit"=>1119.42, "balance"=>2651.76, "date"=>"6/30/17", "description"=>"DATAPIPE INC DIRECT DEP PPD", "category"=>"Income"}]}, "transaction"=>{}}
+Unpermitted parameters: :debit, :credit, :balance, :date, :description, :category
+Unpermitted parameters: :debit, :credit, :balance, :date, :description, :category
+Unpermitted parameters: :debit, :credit, :balance, :date, :description, :category
+Unpermitted parameters: :debit, :credit, :balance, :date, :description, :category
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 43903ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/models/transaction.rb:11:in `parseLocation'
+app/controllers/api/transactions_controller.rb:80:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:79:in `each'
+app/controllers/api/transactions_controller.rb:79:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:51:21 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>"", "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}, {"debit"=>"", "credit"=>1119.42, "balance"=>2651.76, "date"=>"6/30/17", "description"=>"DATAPIPE INC DIRECT DEP PPD", "category"=>"Income"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.9ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `name`, `location`, `category`, `description`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, 'PIER 66 MARITIME', 'NEW YORK, NY, US', 'Bars', 'PIER 66 MARITIME              POS     NEW YORK      NY US        000075', '2017-08-06 17:51:35', '2017-08-06 17:51:35')[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 16035ms (ActiveRecord: 14.1ms)
+
+
+  
+NoMethodError (undefined method `sub' for nil:NilClass):
+  
+app/models/transaction.rb:16:in `parseLocation'
+app/controllers/api/transactions_controller.rb:80:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:79:in `each'
+app/controllers/api/transactions_controller.rb:79:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:51:52 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>"", "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}, {"debit"=>"", "credit"=>1119.42, "balance"=>2651.76, "date"=>"6/30/17", "description"=>"DATAPIPE INC DIRECT DEP PPD", "category"=>"Income"}]}, "transaction"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `name`, `location`, `category`, `description`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, 'PIER 66 MARITIME', 'NEW YORK, NY, US', 'Bars', 'PIER 66 MARITIME              POS     NEW YORK      NY US        000075', '2017-08-06 17:53:10', '2017-08-06 17:53:10')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 88041ms (ActiveRecord: 1.9ms)
+
+
+  
+NoMethodError (undefined method `sub' for nil:NilClass):
+  
+app/models/transaction.rb:16:in `parseLocation'
+app/controllers/api/transactions_controller.rb:80:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:79:in `each'
+app/controllers/api/transactions_controller.rb:79:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 13:55:06 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>"", "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}, {"debit"=>"", "credit"=>1119.42, "balance"=>2651.76, "date"=>"6/30/17", "description"=>"DATAPIPE INC DIRECT DEP PPD", "category"=>"Income"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `name`, `location`, `category`, `description`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, 'PIER 66 MARITIME', 'NEW YORK, NY, US', 'Bars', 'PIER 66 MARITIME              POS     NEW YORK      NY US        000075', '2017-08-06 17:55:19', '2017-08-06 17:55:19')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`credit`, `balance`, `category`, `description`, `created_at`, `updated_at`) VALUES (1119.42, 2651.76, 'Income', 'DATAPIPE INC DIRECT DEP PPD', '2017-08-06 17:55:19', '2017-08-06 17:55:19')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 12518ms (Views: 0.2ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 14:22:17 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>"", "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}, {"debit"=>"", "credit"=>1119.42, "balance"=>2651.76, "date"=>"6/30/17", "description"=>"DATAPIPE INC DIRECT DEP PPD", "category"=>"Income"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `location`, `category`, `description`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, '2017-08-06', 'PIER 66 MARITIME', 'NEW YORK, NY, US', 'Bars', 'PIER 66 MARITIME              POS     NEW YORK      NY US        000075', '2017-08-06 18:36:48', '2017-08-06 18:36:48')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`credit`, `balance`, `category`, `description`, `created_at`, `updated_at`) VALUES (1119.42, 2651.76, 'Income', 'DATAPIPE INC DIRECT DEP PPD', '2017-08-06 18:37:02', '2017-08-06 18:37:02')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 884096ms (Views: 0.2ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 14:48:07 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>"", "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}, {"debit"=>"", "credit"=>1119.42, "balance"=>2651.76, "date"=>"6/30/17", "description"=>"DATAPIPE INC DIRECT DEP PPD", "category"=>"Income"}]}, "transaction"=>{}}
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `parse_date' for #<Api::TransactionsController:0x007ff796d66420>
+Did you mean?  parseDate):
+  
+app/controllers/api/transactions_controller.rb:87:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:86:in `each'
+app/controllers/api/transactions_controller.rb:86:in `batchCreate'
+app/controllers/api/transactions_controller.rb:26:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-06 14:48:34 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>"", "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}, {"debit"=>"", "credit"=>1119.42, "balance"=>2651.76, "date"=>"6/30/17", "description"=>"DATAPIPE INC DIRECT DEP PPD", "category"=>"Income"}]}, "transaction"=>{}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `location`, `category`, `description`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, '2017-06-30', 'PIER 66 MARITIME', 'NEW YORK, NY, US', 'Bars', 'PIER 66 MARITIME              POS     NEW YORK      NY US        000075', '2017-08-06 18:49:18', '2017-08-06 18:49:18')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`credit`, `balance`, `date`, `category`, `description`, `created_at`, `updated_at`) VALUES (1119.42, 2651.76, '2017-06-30', 'Income', 'DATAPIPE INC DIRECT DEP PPD', '2017-08-06 18:49:29', '2017-08-06 18:49:29')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 54906ms (Views: 0.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-06 15:37:06 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::TransactionsControllerIndex):
+  
+app/controllers/api/transactions_controller.rb:13:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-06 15:37:47 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::TransactionsControllerIndex):
+  
+app/controllers/api/transactions_controller.rb:13:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-06 15:39:40 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::TransactionsControllerIndex):
+  
+app/controllers/api/transactions_controller.rb:13:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-06 16:28:48 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `stubdata' for #<Class:0x007ff796b78168>
+Did you mean?  stubData):
+  
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-06 16:28:50 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `stubdata' for #<Class:0x007ff796b78168>
+Did you mean?  stubData):
+  
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-1" for 127.0.0.1 at 2017-08-06 16:29:10 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-1"}
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-01') ORDER BY date DESC[0m
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 16:29:32 -0400
+Completed 500 Internal Server Error in 35592ms (ActiveRecord: 1.5ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:19:in `index'
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC[0m
+Completed 500 Internal Server Error in 152541ms (ActiveRecord: 1.3ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:19:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 16:32:31 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 19443ms (ActiveRecord: 0.4ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:19:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 16:47:54 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:17: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:17: syntax error, unexpected keyword_end
+app/models/transaction.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 16:48:58 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:17: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:17: syntax error, unexpected keyword_end
+app/models/transaction.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 16:49:04 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:17: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:17: syntax error, unexpected keyword_end
+app/models/transaction.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 16:49:42 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:17: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:17: syntax error, unexpected keyword_end
+app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 16:51:05 -0400
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:17: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:17: syntax error, unexpected keyword_end
+app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 16:51:30 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 16:52:15 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:17: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:17: syntax error, unexpected keyword_end
+app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 16:52:26 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:17: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:17: syntax error, unexpected keyword_end
+app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 16:52:28 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:17: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:17: syntax error, unexpected keyword_end
+app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 16:53:20 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 200 OK in 22210ms (Views: 0.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 16:56:52 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:17: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:17: syntax error, unexpected keyword_end
+app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 17:52:30 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:17: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:17: syntax error, unexpected keyword_end
+app/models/transaction.rb:38: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 18:02:06 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:21: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:42: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:21: syntax error, unexpected keyword_end
+app/models/transaction.rb:42: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 18:02:08 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:21: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:42: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:21: syntax error, unexpected keyword_end
+app/models/transaction.rb:42: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 18:02:10 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:21: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:42: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:21: syntax error, unexpected keyword_end
+app/models/transaction.rb:42: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 18:02:13 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:21: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:42: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:21: syntax error, unexpected keyword_end
+app/models/transaction.rb:42: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 18:02:40 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:14: syntax error, unexpected '|'
+on.date >= (prevDate + 1) do |date|
+                              ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:21: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:42: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:14: syntax error, unexpected '|'
+app/models/transaction.rb:21: syntax error, unexpected keyword_end
+app/models/transaction.rb:42: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 18:08:14 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 200 OK in 73763ms (Views: 0.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 18:09:43 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 200 OK in 72786ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 18:16:36 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 200 OK in 45571ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 18:18:46 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 200 OK in 8970ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 18:19:22 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 200 OK in 7939ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 18:38:21 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Started GET "/api/line_graphs" for 127.0.0.1 at 2017-08-06 18:48:44 -0400
+Completed 500 Internal Server Error in 632810ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `prevTransaction' for #<Class:0x007fc8540e07d0>
+Did you mean?  transaction):
+  
+app/models/transaction.rb:17:in `block (2 levels) in stubData'
+app/models/transaction.rb:14:in `upto'
+app/models/transaction.rb:14:in `block in stubData'
+app/models/transaction.rb:11:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Processing by Api::LineGraphsController#index as HTML
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (89.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 147ms (Views: 1.7ms | ActiveRecord: 89.7ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 18:49:12 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:12:in `block in stubData'
+app/models/transaction.rb:11:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-06 18:49:42 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 566860ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `block in stubData'
+app/models/transaction.rb:11:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 21:42:51 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 229947ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `block in stubData'
+app/models/transaction.rb:11:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 21:50:13 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+Completed 500 Internal Server Error in 4473ms (ActiveRecord: 0.4ms)
+
+
+  
+ArgumentError (comparison of DateTime with Transaction failed):
+  
+app/models/transaction.rb:14:in `>'
+app/models/transaction.rb:14:in `block in stubData'
+app/models/transaction.rb:12:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 21:50:35 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 40527ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:18:in `block in stubData'
+app/models/transaction.rb:12:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 21:54:00 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:18:in `block in stubData'
+app/models/transaction.rb:12:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 21:54:02 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.6ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:18:in `block in stubData'
+app/models/transaction.rb:12:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 21:54:37 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 2.6ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:19:in `block in stubData'
+app/models/transaction.rb:12:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 21:55:11 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:20:in `block in stubData'
+app/models/transaction.rb:12:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 21:59:29 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:17:in `block in stubData'
+app/models/transaction.rb:14:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:01:00 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:07:22 -0400
+Completed 500 Internal Server Error in 386822ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:17:in `block in stubData'
+app/models/transaction.rb:14:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:08:20 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:08:53 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:09:12 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:13: syntax error, unexpected ..., expecting &. or :: or '[' or '.'
+    for start_d...end_d do |date|
+                  ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:13: syntax error, unexpected ..., expecting &. or :: or '[' or '.'
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:09:29 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:13: syntax error, unexpected ..., expecting &. or :: or '[' or '.'
+    for start_d...end_d do |date|
+                  ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:13: syntax error, unexpected ..., expecting &. or :: or '[' or '.'
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:09:31 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:13: syntax error, unexpected ..., expecting &. or :: or '[' or '.'
+    for start_d...end_d do |date|
+                  ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:13: syntax error, unexpected ..., expecting &. or :: or '[' or '.'
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:09:40 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:13: syntax error, unexpected ..., expecting &. or :: or '[' or '.'
+    for start_d...end_d do |date|
+                  ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:13: syntax error, unexpected ..., expecting &. or :: or '[' or '.'
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:10:31 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:10:56 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:10:58 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:11:02 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:11:55 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `end_d' for #<Class:0x007ffd23f929c8>):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:13:08 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:13:11 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:13:13 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:13:33 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 30765ms (ActiveRecord: 0.9ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:19:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:15:18 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:15:20 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:16:57 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:16:59 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:33: syntax error, unexpected keyword_end
+      end
+         ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:33: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:17:15 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:34: syntax error, unexpected keyword_end
+    end
+       ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:34: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:17:17 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:34: syntax error, unexpected keyword_end
+    end
+       ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:34: syntax error, unexpected keyword_end
+app/models/transaction.rb:83: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:17:59 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `each' for Thu, 10 Aug 2017 00:00:00 +0000:DateTime):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:18:44 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 8131ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:16:in `block in stubData'
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:19:28 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 4120ms (ActiveRecord: 0.9ms)
+
+
+  
+NameError (undefined local variable or method `i' for #<Class:0x007ffd26ac9ba0>):
+  
+app/models/transaction.rb:23:in `block in stubData'
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:20:37 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 23299ms (ActiveRecord: 0.8ms)
+
+
+  
+NameError (undefined local variable or method `i' for #<Class:0x007ffd26972478>):
+  
+app/models/transaction.rb:31:in `block in stubData'
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:21:32 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 121763ms (ActiveRecord: 1.4ms)
+
+
+  
+LocalJumpError (no block given (yield)):
+  
+app/models/transaction.rb:19:in `block in stubData'
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:24:27 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 45918ms (ActiveRecord: 1.5ms)
+
+
+  
+LocalJumpError (no block given (yield)):
+  
+app/models/transaction.rb:20:in `block in stubData'
+app/models/transaction.rb:14:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:27:06 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:31:15 -0400
+Completed 500 Internal Server Error in 264567ms (ActiveRecord: 1.7ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:23:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 113562ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:37:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:33:30 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed   in 112317ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:35:27 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 249696ms (ActiveRecord: 4.6ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:38:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:39:40 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT  `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date DESC LIMIT 1[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed   in 255338ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:45:41 -0400
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed   in 8556ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 22:50:49 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed   in 13247ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 23:00:34 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 3632ms (ActiveRecord: 1.6ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:24:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 23:09:56 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+        date = date + 1
+            ^):
+  
+app/models/transaction.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 23:10:56 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+        date = date + 1
+            ^):
+  
+app/models/transaction.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 23:11:02 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+        date = date + 1
+            ^):
+  
+app/models/transaction.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 23:11:33 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+        date = date + 1
+            ^):
+  
+app/models/transaction.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 23:11:35 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+        date = date + 1
+            ^):
+  
+app/models/transaction.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 23:13:58 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+        date = date + 1
+            ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:103: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/models/transaction.rb:103: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 23:14:01 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+        date = date + 1
+            ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:103: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/models/transaction.rb:103: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 23:14:34 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/models/transaction.rb:103: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/transaction.rb:103: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 23:14:50 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 5386ms (ActiveRecord: 1.7ms)
+
+
+  
+NoMethodError (undefined method `checkLast' for #<Class:0x007ff810f576d8>):
+  
+app/models/transaction.rb:21:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 23:15:41 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 366714ms (ActiveRecord: 0.5ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:19:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-07 23:21:59 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 25868625ms (ActiveRecord: 0.4ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:19:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 06:33:18 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 73073ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:18:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 06:35:29 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 7802ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `data' for #<Transaction:0x007ff811d1b670>
+Did you mean?  date):
+  
+app/models/transaction.rb:22:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 06:36:24 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed   in 14211ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 06:37:54 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed   in 81519ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 06:39:28 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 62636ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:19:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 06:41:19 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 29904ms (ActiveRecord: 0.4ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:19:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 06:46:21 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 06:46:35 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 200 OK in 99671ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 06:48:18 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 47122ms (ActiveRecord: 0.4ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Must provide `is_collection: true` to `serialize` when serializing collections.):
+  
+app/controllers/api/transactions_controller.rb:19:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 06:49:48 -0400
+  
+SyntaxError (/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:21: syntax error, unexpected ',', expecting =>
+        transactions,
+                     ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:23: syntax error, unexpected ')', expecting keyword_end
+      )
+       ^
+/Users/d_berman/Documents/budgee_site/budgee_api/app/controllers/api/transactions_controller.rb:99: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/transactions_controller.rb:21: syntax error, unexpected ',', expecting =>
+app/controllers/api/transactions_controller.rb:23: syntax error, unexpected ')', expecting keyword_end
+app/controllers/api/transactions_controller.rb:99: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 06:50:24 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` >= '2017-07-30' AND `transactions`.`date` < '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 167886ms (ActiveRecord: 1.7ms)
+
+
+  
+NameError (undefined local variable or method `transaction' for #<Api::TransactionsController:0x007fca5d082170>
+Did you mean?  transactions):
+  
+app/controllers/api/transactions_controller.rb:20:in `index'
+Started GET "/api/transactions?start_date=2017-7-30&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 06:53:42 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-7-30", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-07-30' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 200 OK in 4125ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 06:54:34 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 200 OK in 5406ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:03:13 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `earlierBalance' for #<Class:0x007fca5ad248b8>):
+  
+app/models/transaction.rb:30:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:03:39 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `earlierBalance' for #<Class:0x007fca5d0b8158>):
+  
+app/models/transaction.rb:30:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:03:42 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `earlierBalance' for #<Class:0x007fca5d0b8158>):
+  
+app/models/transaction.rb:30:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:04:07 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `earlierBalance' for #<Class:0x007fca5ac55d38>):
+  
+app/models/transaction.rb:30:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:04:36 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `date' for #<Class:0x007fca5ae4f760>
+Did you mean?  update):
+  
+app/models/transaction.rb:68:in `earlierBalance'
+app/models/transaction.rb:30:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:05:09 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.9ms)
+
+
+  
+NoMethodError (undefined method `balance' for Wed, 02 Aug 2017:Date):
+  
+app/models/transaction.rb:69:in `earlierBalance'
+app/models/transaction.rb:30:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:06:19 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `balance' for Wed, 02 Aug 2017:Date):
+  
+app/models/transaction.rb:69:in `earlierBalance'
+app/models/transaction.rb:30:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:06:22 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `balance' for Wed, 02 Aug 2017:Date):
+  
+app/models/transaction.rb:69:in `earlierBalance'
+app/models/transaction.rb:30:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:06:58 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 2.2ms)
+
+
+  
+NoMethodError (undefined method `[]' for Wed, 02 Aug 2017:Date):
+  
+app/models/transaction.rb:69:in `earlierBalance'
+app/models/transaction.rb:30:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:07:29 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `balance' for Wed, 02 Aug 2017:Date):
+  
+app/models/transaction.rb:30:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:07:57 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+Completed 200 OK in 138269ms (Views: 0.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:10:22 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 585903ms (Views: 1.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:20:22 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 82327ms (Views: 0.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:22:51 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (undefined local variable or method `start' for #<Class:0x007fca5d0f3488>):
+  
+app/models/transaction.rb:30:in `stubData'
+app/controllers/api/transactions_controller.rb:14:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:23:07 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed   in 49954ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:24:02 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed   in 19348ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:24:40 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 15677ms (Views: 0.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:32:13 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 4362ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 07:33:34 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 21ms (Views: 1.1ms | ActiveRecord: 0.9ms)
+
+
