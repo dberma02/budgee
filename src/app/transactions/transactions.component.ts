@@ -20,12 +20,12 @@ export class TransactionsComponent implements OnInit {
     constructor(private transactionService: TransactionService) { }
 
     columns = [
-        { name: 'debit' },
-        { name: 'credit' },
-        { name: 'balance' },
-        { name: 'date' },
-        { name: 'description' },
-        { name: 'category' }
+        { name: 'Debit' },
+        { name: 'Credit' },
+        { name: 'Balance' },
+        { name: 'Date' },
+        { name: 'Description' },
+        { name: 'Category' }
     ];
 
 
