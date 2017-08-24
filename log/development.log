@@ -5422,3 +5422,1128 @@ NoMethodError (undefined method `date' for nil:NilClass):
   
 app/models/transaction.rb:13:in `stubData'
 app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:08:46 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:08:46 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:09:34 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:09:34 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:09:37 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:09:37 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (1.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:12:23 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:12:23 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:12:36 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:12:36 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (1.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.8ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:12:39 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:12:39 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:12:41 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:12:41 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:12:52 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:12:52 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (28.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 28.8ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:12:55 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:12:55 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:01 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:01 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.7ms)
+
+
+  [1m[36mTransaction Load (3.9ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 3.9ms)
+
+
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:07 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (1.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.7ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:07 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:18 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:18 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:35 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:35 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:43 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:43 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (4.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 4.5ms)
+
+
+  [1m[36mTransaction Load (3.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 3.8ms)
+
+
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:44 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:45 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (2.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:45 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:48 -0400
+Processing by Api::TransactionsController#index as HTML
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:48 -0400
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+  [1m[36mTransaction Load (1.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+NoMethodError (undefined method `date' for nil:NilClass):
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.8ms)
+
+
+  
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:49 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:50 -0400
+Processing by Api::TransactionsController#index as HTML
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:50 -0400
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.6ms)
+
+
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:51 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:53 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 13:13:53 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (1.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-24 13:14:08 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>[{"ChkRef"=>nil, "Debit"=>9.62, "Credit"=>nil, "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}], "transaction"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<Array:0x007ffe3631f2b8>):
+  
+app/controllers/api/transactions_controller.rb:45:in `createParams'
+app/controllers/api/transactions_controller.rb:75:in `batchCreate'
+app/controllers/api/transactions_controller.rb:23:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-24 13:15:34 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>[{"ChkRef"=>nil, "Debit"=>9.62, "Credit"=>nil, "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}], "transaction"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<Array:0x007ffe359c1928>):
+  
+app/controllers/api/transactions_controller.rb:45:in `createParams'
+app/controllers/api/transactions_controller.rb:75:in `batchCreate'
+app/controllers/api/transactions_controller.rb:23:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-24 13:21:00 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>[{"ChkRef"=>nil, "Debit"=>9.62, "Credit"=>nil, "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}, {"ChkRef"=>nil, "Debit"=>9.62, "Credit"=>nil, "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}], "transaction"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<Array:0x007ffe365549e8>):
+  
+app/controllers/api/transactions_controller.rb:45:in `createParams'
+app/controllers/api/transactions_controller.rb:75:in `batchCreate'
+app/controllers/api/transactions_controller.rb:23:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-24 13:21:11 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>[{"ChkRef"=>nil, "Debit"=>9.62, "Credit"=>nil, "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}, {"ChkRef"=>nil, "Debit"=>9.62, "Credit"=>nil, "Balance"=>3042.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}], "transaction"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<Array:0x007ffe35bd37c0>):
+  
+app/controllers/api/transactions_controller.rb:45:in `createParams'
+app/controllers/api/transactions_controller.rb:75:in `batchCreate'
+app/controllers/api/transactions_controller.rb:23:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-24 13:25:12 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>{"ChkRef"=>nil, "Debit"=>9.62, "Credit"=>nil, "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}}, "transaction"=>{}}
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-24 13:26:35 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>{"ChkRef"=>nil, "Debit"=>9.62, "Credit"=>nil, "Balance"=>2642.14, "Date"=>"6/30/17", "Description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "Category"=>"Bars"}}, "transaction"=>{}}
+Unpermitted parameters: :ChkRef, :Debit, :Credit, :Balance, :Date, :Description, :Category
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-24 14:15:34 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>{"chkref"=>nil, "debit"=>9.62, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}}, "transaction"=>{}}
+Unpermitted parameter: :chkref
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/api/transactions_controller.rb:76:in `[]'
+app/controllers/api/transactions_controller.rb:76:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:75:in `batchCreate'
+app/controllers/api/transactions_controller.rb:23:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-24 14:16:14 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>{"debit"=>9.62, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}}, "transaction"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/api/transactions_controller.rb:76:in `[]'
+app/controllers/api/transactions_controller.rb:76:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:75:in `batchCreate'
+app/controllers/api/transactions_controller.rb:23:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-24 14:18:51 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>{"debit"=>9.62, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}}, "transaction"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/api/transactions_controller.rb:76:in `[]'
+app/controllers/api/transactions_controller.rb:76:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:75:in `batchCreate'
+app/controllers/api/transactions_controller.rb:23:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-24 14:19:06 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>{"debit"=>9.62, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}}, "transaction"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.4ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/api/transactions_controller.rb:76:in `[]'
+app/controllers/api/transactions_controller.rb:76:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:75:in `batchCreate'
+app/controllers/api/transactions_controller.rb:23:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-24 14:19:25 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>{"debit"=>9.62, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}}, "transaction"=>{}}
+Completed 500 Internal Server Error in 50787ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/api/transactions_controller.rb:77:in `[]'
+app/controllers/api/transactions_controller.rb:77:in `block in batchCreate'
+app/controllers/api/transactions_controller.rb:75:in `batchCreate'
+app/controllers/api/transactions_controller.rb:23:in `create'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-24 14:20:19 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `location`, `category`, `description`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, '2017-06-30', 'PIER 66 MARITIME', 'NEW YORK, NY, US', 'Bars', 'PIER 66 MARITIME              POS     NEW YORK      NY US        000075', '2017-08-24 18:20:37', '2017-08-24 18:20:37')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 18488ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 14:54:21 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 14:54:25 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 14:54:26 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 14:54:28 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-08-24 14:56:35 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>nil, "balance"=>2642.14, "date"=>"8/5/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `location`, `category`, `description`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, '2017-08-05', 'PIER 66 MARITIME', 'NEW YORK, NY, US', 'Bars', 'PIER 66 MARITIME              POS     NEW YORK      NY US        000075', '2017-08-24 18:56:35', '2017-08-24 18:56:35')[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 14:56:40 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-06-30' ORDER BY date DESC[0m
+Completed 200 OK in 17ms (Views: 1.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 14:56:45 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-06-30' ORDER BY date DESC[0m
+Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:00:53 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-06-30' ORDER BY date DESC[0m
+Completed 200 OK in 20ms (Views: 1.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:01:51 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-06-30' ORDER BY date DESC[0m
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:02:20 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-06-30' ORDER BY date DESC[0m
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-10&end_date=undefined" for 127.0.0.1 at 2017-08-24 15:10:51 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-10", "end_date"=>"undefined"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: type):
+  
+app/controllers/api/transactions_controller.rb:58:in `return_type'
+app/controllers/api/transactions_controller.rb:8:in `index'
+Started GET "/api/transactions?start_date=2017-8-10&end_date=undefined" for 127.0.0.1 at 2017-08-24 15:12:55 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-10", "end_date"=>"undefined"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: format):
+  
+app/controllers/api/transactions_controller.rb:58:in `format'
+app/controllers/api/transactions_controller.rb:8:in `index'
+Started GET "/api/transactions?start_date=2017-8-10&end_date=undefined" for 127.0.0.1 at 2017-08-24 15:17:57 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-10", "end_date"=>"undefined"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: format):
+  
+app/controllers/api/transactions_controller.rb:58:in `format'
+app/controllers/api/transactions_controller.rb:8:in `index'
+Started GET "/api/transactions?start_date=2017-8-10&end_date=undefined" for 127.0.0.1 at 2017-08-24 15:18:00 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-10", "end_date"=>"undefined"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: format):
+  
+app/controllers/api/transactions_controller.rb:58:in `format'
+app/controllers/api/transactions_controller.rb:8:in `index'
+Started GET "/api/transactions?start_date=2017-8-10&end_date=undefined" for 127.0.0.1 at 2017-08-24 15:18:01 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-10", "end_date"=>"undefined"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: format):
+  
+app/controllers/api/transactions_controller.rb:58:in `format'
+app/controllers/api/transactions_controller.rb:8:in `index'
+Started GET "/api/transactions?start_date=2017-8-10&end_date=undefined" for 127.0.0.1 at 2017-08-24 15:18:01 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-10", "end_date"=>"undefined"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: format):
+  
+app/controllers/api/transactions_controller.rb:58:in `format'
+app/controllers/api/transactions_controller.rb:8:in `index'
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:18:17 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 26ms (Views: 0.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/transactions?format=charts&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:18:33 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/transactions?format=charts&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:18:38 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/transactions?format=charts&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:19:44 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:16:in `index'
+Started GET "/api/transactions?format=charts&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:19:46 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:16:in `index'
+Started GET "/api/transactions?format=charts&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:19:50 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:16:in `index'
+Started GET "/api/transactions?format=charts&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:21:44 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:16:in `index'
+Started GET "/api/transactions?format=charts&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:21:51 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:16:in `index'
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:21:56 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 17ms (Views: 0.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:25:17 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/transactions?format=charts&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:25:18 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:17:in `index'
+Started GET "/api/transactions?format=charts&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:25:20 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:17:in `index'
+Started GET "/api/transactions?format=charts&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:25:22 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:17:in `index'
+Started GET "/api/transactions?format=charts&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:26:23 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:17:in `index'
+Started GET "/api/transactions?format=charts&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:26:44 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+JSONAPI::Serializer::AmbiguousCollectionError (Attempted to serialize a single object as a collection.):
+  
+app/controllers/api/transactions_controller.rb:17:in `index'
+Started GET "/api/transactions?format=chart&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:26:51 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-06-30' ORDER BY date DESC[0m
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m  [["date", "2017-08-04"], ["date", "2017-08-10"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-06-30' ORDER BY date DESC[0m  [["date", "2017-06-30"]]
+Completed 200 OK in 26157ms (Views: 1.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:32:04 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Started GET "/api/transactions?format=chart&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:33:35 -0400
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-06-30' ORDER BY date DESC[0m
+Completed 200 OK in 264279ms (Views: 0.9ms | ActiveRecord: 1.2ms)
+
+
+Processing by Api::TransactionsController#index as 
+Started GET "/api/transactions?format=chart&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:36:29 -0400
+Started GET "/api/transactions?format=chart&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:36:29 -0400
+Started GET "/api/transactions?format=chart&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:36:29 -0400
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Processing by Api::TransactionsController#index as 
+Started GET "/api/transactions?format=chart&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:36:29 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Processing by Api::TransactionsController#index as 
+Processing by Api::TransactionsController#index as 
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+Completed   in 19202ms (ActiveRecord: 0.0ms)
+
+
+Completed   in 19226ms (ActiveRecord: 0.0ms)
+
+
+Completed   in 19225ms (ActiveRecord: 0.0ms)
+
+
+Completed   in 19221ms (ActiveRecord: 0.0ms)
+
+
+Completed   in 19198ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:37:28 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-06-30' ORDER BY date DESC[0m
+Completed 200 OK in 18ms (Views: 0.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:37:31 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-06-30' ORDER BY date DESC[0m
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:37:32 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:37:33 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:38:05 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:39:04 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:39:07 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:39:10 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:39:42 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:39:43 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 15:39:48 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-06-30' ORDER BY date DESC[0m
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.9ms)
+
+

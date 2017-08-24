@@ -1,0 +1,58 @@
+FORMATTING FOR TRANSACTIONS CREATE
+
+The input should be formatted in JSON API format as follows:
+
+{"data": {"attributes":[{"debit": 9.62,"credit": null,"balance": 2642.14,"date": "6/30/17","description": "PIER 66 MARITIME              POS     NEW YORK      NY US        000075","category": "Bars"}]}}
+
+Although the data straight from the bank will give all fields in uppercase letters, the API takes them in lower case, so they will need to be changed accordingly.
+The sample transactions.JSON also does not have a category (as that is added later by the user)
+
+
+
+
+
+Big Picture Goal:
+  Make categories editable from table
+
+Tasks:
+  Expand API to have update.
+
+  Quick reformat of table, so all fields visable and in good order
+
+  Expand API to have a "categories" model (for the possible category choices that the user can enter)
+
+  Create categories endpoint, so that the categories selected on angular website can be saved to database
+
+  Create Angular form to call categories endpoint so that user can enter the categories he/she would like to use to sort transactions
+
+  Create dropdown form within table, so that user can select appropriate category for each transaction
+    -Update button, so that when all categories are selected, the categories for all transactions are updated on server
+
+STAGE 1:
+  Scaled down version to get up quickly:
+    -No "categories" model in rails
+    -Forms in table not drop down, user input text directly
+    
+
+
+Big Picture Goal:
+  Create ability to upload csv data to the Rails server
+
+Tasks:
+  Figure out if best to do in Angular, or directly to server with Rails 
+
+
+Big Picture Goal:
+  Make the table well formatted
+
+Tasks:
+  Make sure all fields visable
+  Make sure fields are appropriate sizes to display text, or that there is wrapping
+  Make sure the table does not display stub data!
+
+
+MISC:
+  Getting errors in API when "attempting to serialize single object as collection" aka messes up if only one transaction (even in date range??)
+  Add constants files to both the API and the Angular front end
+
+

@@ -1,6 +1,7 @@
 class Transaction < ApplicationRecord
   before_save :parseLocation
 
+  #Fails if the date range does not have any valid data in it
   def self.stubData(start_d, end_d)
     transactions = Transaction.where(date: start_d..end_d).order('date ASC')
     stubbed = []

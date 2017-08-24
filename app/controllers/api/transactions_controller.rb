@@ -4,13 +4,14 @@ module Api
     include ErrorSerializer
 
     def index
-      if(start_date && end_date)
+
+      if format == "chart"
         start_d = DateTime.parse(start_date)
         end_d = DateTime.parse(end_date)
 
         transactions = Transaction.stubData(start_d, end_d)
-      else
-#        transactions = Transaction.order('date DESC')
+      elsif format == "table"
+        transactions = Transaction.order('date DESC')
       end
       render json: JSONAPI::Serializer.serialize(
         transactions,
@@ -49,6 +50,12 @@ module Api
       params.permit(:start_date, :end_date)
     end
     
+    def format
+      params.require(:format)
+      params.permit(:start_date, :end_date)
+      params[:format]
+    end
+
     def start_date
       params.require(:start_date)
       params[:start_date]
@@ -74,7 +81,6 @@ module Api
     def batchCreate
       createParams[:attributes].each do |transaction|
         transaction[:date] = parseDate(transaction[:date])
-        binding.pry
         Transaction.create(transaction)
 #       unless transaction.save
 #         return "error" 
