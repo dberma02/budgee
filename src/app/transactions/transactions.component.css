@@ -11,7 +11,7 @@
    font-size: 16px;
 }
 .ngx-datatable.bootstrap .datatable-header {
-   background: #424242;
+   background: #222222;
    color: #ededed;
    height: unset !important;
    margin-bottom: -3;
@@ -44,7 +44,7 @@
    color: #FFF;
 }
 .ngx-datatable.bootstrap .datatable-footer {
-   background: #424242;
+   background: #222222;
    color: #ededed;
    margin-top: 1px;
 }
