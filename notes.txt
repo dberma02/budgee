@@ -8,9 +8,6 @@ Although the data straight from the bank will give all fields in uppercase lette
 The sample transactions.JSON also does not have a category (as that is added later by the user)
 
 
-
-
-
 Big Picture Goal:
   Make categories editable from table
 
@@ -39,20 +36,15 @@ Big Picture Goal:
   Create ability to upload csv data to the Rails server
 
 Tasks:
-  Figure out if best to do in Angular, or directly to server with Rails 
-
-
-Big Picture Goal:
-  Make the table well formatted
-
-Tasks:
-  Make sure all fields visable
-  Make sure fields are appropriate sizes to display text, or that there is wrapping
-  Make sure the table does not display stub data!
+  Figure out if best to do in Angular, or directly to server with Rails  
+    -All of the data cleaning functions that you wrote, you would be able to keep.
+    -Stub Data wouldn't change
+    -Becuase you are planning on using CSV input (plaintext), Uploading to the server shouldn't be too bad. Can just grab that file from HTML input, send its contents as data in the JSON.
+    -Then in Rails you would have to change things so that, rather than getting each field from parameter, figure out how to parse the plaintext CSV string into array of transactions.
 
 
 MISC:
   Getting errors in API when "attempting to serialize single object as collection" aka messes up if only one transaction (even in date range??)
-  Add constants files to both the API and the Angular front end
+  Add constants files to API
 
 

@@ -6,7 +6,7 @@ module Api
 
     attribute :description do
       desc =
-         "#{object.name}   #{object.location}    #{object.category}"
+         "#{object.name},   #{object.location}"
     end
   end
 end
