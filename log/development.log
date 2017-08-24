@@ -5044,3 +5044,381 @@ Processing by Api::TransactionsController#index as HTML
 Completed 200 OK in 21ms (Views: 1.1ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:12:53 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 41ms (Views: 1.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:12:55 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (3.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 83ms (Views: 1.5ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:25:19 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 29ms (Views: 1.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:25:23 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 29ms (Views: 1.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:28:34 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 36ms (Views: 2.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:29:22 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (4.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 45ms (Views: 0.9ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:29:57 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (10.7ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 79ms (Views: 1.3ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:30:22 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (4.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (3.2ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 35ms (Views: 1.4ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:30:56 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 23ms (Views: 1.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:31:45 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (25.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 37ms (Views: 1.6ms | ActiveRecord: 26.5ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:33:42 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 88ms (Views: 1.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:55:46 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:55:57 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:57:50 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 9ms (Views: 1.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:58:06 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (53.1ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 81ms (Views: 1.2ms | ActiveRecord: 55.3ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 21:58:59 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 22:01:57 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 22:02:04 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (1.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 74ms (Views: 1.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 22:02:46 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 22:03:31 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 22:31:34 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 12ms (Views: 1.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 22:31:37 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 27ms (Views: 1.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 22:31:46 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (2.9ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (1.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 24ms (Views: 2.4ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 22:32:24 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (5.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 13ms (Views: 1.2ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 22:32:40 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 22:32:43 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (8.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 68ms (Views: 1.1ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 22:32:48 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-08 22:32:53 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (2.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (1.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 17ms (Views: 0.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-12 11:32:42 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (103.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (23.7ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 174ms (Views: 4.5ms | ActiveRecord: 127.8ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-12 11:32:47 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (21.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (18.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 275ms (Views: 4.1ms | ActiveRecord: 41.4ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-12 11:32:49 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (1.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (17.2ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (1.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 35ms (Views: 3.3ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-12 11:33:28 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (1.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (2.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 110ms (Views: 1.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-12 11:34:07 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (1.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 25ms (Views: 2.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-12 11:36:20 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (82.2ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 106ms (Views: 2.0ms | ActiveRecord: 97.6ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-12 11:36:22 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (2.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 18ms (Views: 1.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-12 11:38:03 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (5.9ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT MAX(`transactions`.`date`) FROM `transactions` WHERE (date < '2017-08-04 00:00:00')[0m
+  [1m[36mTransaction Load (2.2ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE `transactions`.`date` = '2017-08-02' ORDER BY date DESC[0m
+Completed 200 OK in 70ms (Views: 3.1ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 12:59:01 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 12:59:32 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 12:59:36 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
+Started GET "/api/transactions?start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-24 12:59:38 -0400
+Processing by Api::TransactionsController#index as HTML
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-04' AND '2017-08-10') ORDER BY date ASC[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `date' for nil:NilClass):
+  
+app/models/transaction.rb:13:in `stubData'
+app/controllers/api/transactions_controller.rb:11:in `index'
