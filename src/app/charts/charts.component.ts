@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, Subscription } from 'rxjs/Rx';
+
 import { Transaction } from '../transaction';
 import { TransactionService } from '../transaction.service';
 import { PlotlyHelperService } from './plotly-helper.service';
@@ -11,6 +13,8 @@ declare var Plotly: any;
   providers: [ PlotlyHelperService ]
 })
 export class ChartsComponent implements OnInit {
+  start_d: string = '2017-8-4';
+  end_d: string = '2017-8-10';
 
   transactions: Transaction[];
 
@@ -18,10 +22,17 @@ export class ChartsComponent implements OnInit {
               private plotlyService: PlotlyHelperService) { }
 
   ngOnInit() {
-    this.transactionService.getTransactions().then(transactions => {
-      this.transactions = transactions;
-      this.monthlyBalance(); 
-    });
+    this.transactionService.getTransactions(this.start_d, this.end_d).subscribe(
+      results => { 
+        this.transactions = results;
+        this.monthlyBalance(); 
+      },
+      error => this.handleError(error)
+    );
+//    this.transactionService.getTransactions().then(transactions => {
+//      this.transactions = transactions;
+//      this.monthlyBalance(); 
+//    });
   }
 
   monthlyBalance(): void {
@@ -32,6 +43,10 @@ export class ChartsComponent implements OnInit {
     Plotly.newPlot('plotlychart', plotlyDat[0], plotlyDat[1]);
 
   }
-
   
+  private handleError (error: any) {
+    return Observable.throw("Database error");
+  }
+
+ 
 }

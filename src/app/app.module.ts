@@ -1,14 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { Http, HttpModule, RequestOptions, XHRBackend } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { TransactionsTableComponent } from './transactions-table/transactions-table.component';
+import { TransactionsModule } from './transactions/transactions.module';
 import { TransactionService } from './transaction.service';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { TestBootstrapComponent } from './test-bootstrap/test-bootstrap.component';
-import { NavModule } from './nav/nav.module';
+import { NavbarTopComponent } from './navbar-top/navbar-top.component';
 import { ChartsModule } from './charts/charts.module';
 import { ForecastsModule } from './forecasts/forecasts.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,14 +16,14 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
-    TransactionsTableComponent,
+    NavbarTopComponent,
     TestBootstrapComponent
   ],
   imports: [
-    NgxDatatableModule,
+    HttpModule,
     BrowserModule,
+    TransactionsModule,
     DashboardModule,
-    NavModule,
     ForecastsModule,
     ChartsModule,
     AppRoutingModule

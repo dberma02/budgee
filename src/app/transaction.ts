@@ -1,8 +1,10 @@
 export class Transaction {
-    debit: number;
-    credit: number; 
-    balance: number; 
-    date: string; //not sure this will be correct
-    description: string;
-    category: string;
+  constructor(
+    public debit: number,
+    public credit: number,
+    public balance: number,
+    public date: string, //not sure this will be correct
+    public description: string,
+    public category: string
+  ){}
 }
