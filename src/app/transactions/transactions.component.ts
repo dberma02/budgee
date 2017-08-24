@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable, Subscription } from 'rxjs/Rx';
 import { Transaction } from '../transaction';
 import { TransactionService } from '../transaction.service';
+import * as glob from '../globals';
 
 
 @Component({
@@ -29,7 +30,7 @@ export class TransactionsComponent implements OnInit {
 
 
   ngOnInit() {
-    this.transactionService.getTransactions(this.start_d, this.end_d).subscribe(
+    this.transactionService.getTransactions(glob.TABLE_TRANSACTION_FORMAT , this.start_d, this.end_d).subscribe(
       results => { 
         this.transactions = results;
         this.rows = results;

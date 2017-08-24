@@ -13,8 +13,8 @@ export class TransactionService {
   constructor( private _http: Http) { }
   private transactionsUrl = "http://localhost:3000/api/transactions";
 
-  getTransactions(start_d: string, end_d: string): Observable<Array<Transaction>> {
-    let fullUrl = this.transactionsUrl + this.makeQuery(start_d, end_d); 
+  getTransactions(format: string, start_d: string, end_d: string): Observable<Array<Transaction>> {
+    let fullUrl = this.transactionsUrl + this.makeQuery(format, start_d, end_d); 
     return this._http.get(fullUrl)
       .map(this.extractData)
       .catch((error) => {
@@ -44,8 +44,8 @@ export class TransactionService {
 
   }    
 
-  private makeQuery(start_d: string, end_d: string): string {
-    return "?start_date=" + start_d + "&end_date=" + end_d;
+  private makeQuery(format: string, start_d: string, end_d: string): string {
+    return "?format=" + format + "&start_date=" + start_d + "&end_date=" + end_d;
   }
 
   private handleError (error: any) {

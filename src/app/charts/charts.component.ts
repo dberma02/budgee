@@ -4,6 +4,7 @@ import { Observable, Subscription } from 'rxjs/Rx';
 import { Transaction } from '../transaction';
 import { TransactionService } from '../transaction.service';
 import { PlotlyHelperService } from './plotly-helper.service';
+import * as glob from '../globals';
 declare var Plotly: any;
 
 @Component({
@@ -22,7 +23,7 @@ export class ChartsComponent implements OnInit {
               private plotlyService: PlotlyHelperService) { }
 
   ngOnInit() {
-    this.transactionService.getTransactions(this.start_d, this.end_d).subscribe(
+    this.transactionService.getTransactions(glob.CHART_TRANSACTION_FORMAT , this.start_d, this.end_d).subscribe(
       results => { 
         this.transactions = results;
         this.monthlyBalance(); 
