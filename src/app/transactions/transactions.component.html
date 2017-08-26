@@ -37,8 +37,19 @@
           </ng-template>
   </ngx-datatable-column>
   <ngx-datatable-column name="Category" [flexGrow]="1.3">
-          <ng-template let-value="value" ngx-datatable-cell-template>
-            {{value}}
+          <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value" >
+            <span
+              title="Double click to edit"
+              (dblclick)="editing[rowIndex + '-' +'Category'] = true; printEditing()"
+              *ngIf="!editing[rowIndex + '-category']">
+              {{value}}
+          </span>
+          <input
+            autofocus
+            (blur)="updateValue($event, 'Category', value, row)"
+            *ngIf="editing[rowIndex+ '-name']"
+            type="text"
+            [value]="value"/>
           </ng-template>
   </ngx-datatable-column>
 </ngx-datatable>         

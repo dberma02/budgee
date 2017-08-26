@@ -34,8 +34,10 @@ export class TransactionService {
         transaction.attributes.credit,
         transaction.attributes.balance,
         transaction.attributes.date,
-        transaction.attributes.description,
-        transaction.attributes.category
+        transaction.attributes.name,
+        transaction.attributes.location,
+        transaction.attributes.category,
+        transaction.attributes.description
       );
       transactions.push(tran);
     }

@@ -1,6 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Transaction } from '../transaction';
 
+
+// Right now: Fixed the description text so it is formatted better. 
+// Fixed the dates displayed on x axis so that they have correct number of points in the Plotly data array.
+// Need to alter the y axis (balance) Plotly data array so that it has the correct number of data points, 
+// matching length of other array. i.e. design so that, for each day, if multiple transactions take place,
+// only one will be added to the array to be represented on graph. 
+//    -if only spending, no income, use lowest balance
+//    -if only income, use highest balance
+//    -if income and spending, check if total credit for the day is greater than total debit for the day, choose
+//     which value to display accordingly
+//
+
+
 @Injectable()
 export class PlotlyHelperService {
 
@@ -10,9 +23,10 @@ export class PlotlyHelperService {
   monthlyBalanceChart(transactions: Transaction[], xdat: string, ydat: string, daterange: string): any[] {
     console.log( this.formatPlotlyDataDate(transactions, 'stub'));
     var balance = {
-      x: this.formatPlotlyData(transactions, xdat).reverse(),
+      x: this.formatPlotlyDataDate(transactions, xdat),
       y: this.formatPlotlyData(transactions, ydat),
       type: 'scatter',
+      hoverinfo: 'text',
       mode: 'lines',
       text: this.getText(transactions),
       name: 'Balance for ' + daterange
@@ -35,7 +49,8 @@ export class PlotlyHelperService {
     //  if debit, return daily low
     //  this seems like maybe a backend task???
     var dates = this.formatPlotlyData(transactions, 'date'); 
-    console.log(this.unique(dates)); 
+    console.log("dates: ", this.unique(dates)); 
+    return this.unique(dates)
   }
 
 //  private Date.prototype.addDays = function(days) {
@@ -44,25 +59,6 @@ export class PlotlyHelperService {
 //    return dat;
 //  }; 
 
-
-  //NOT DEALING WITH THIS RN
-//  private getDatesByRange(start: number[], end:number[]): Array<string> {
-//    var dates = new Array<string>();
-//    var startD = new Date(start[0], start[1], start[2])
-//    var endD = new Date(end[0], end[1], end[2])
-//
-//    for (var dt = startD; dt <= endD; dt = dt.AddDays(1))
-//    {
-//       var month = dt.getMonth() + 1;
-//       var day = dt.getDate(); 
-//       var fullYear = dt.getFullYear();
-//       var year = fullYear[2].toString() + fullYear[3].toString();
-////       var date:string = (dt.getMonth + 1)   dd
-////       dates.append();
-//    } 
-//    return dates;
-//  }
-
   private unique(a: Array<string>): Array<string> {
     var seen = {};
     return a.filter(function(item) {
@@ -70,47 +66,58 @@ export class PlotlyHelperService {
     });   
   }
 
+  // Returns a 1d array of data, returning array of with one element for each transaction,
+  // not one element for each date.
+  // For this graph, should return one element for each Date, and then there should be a different process for
+  // making the Description, which will show all of the transactions that took place on that date.
   private formatPlotlyData(transactions: Transaction[], targetData: string): any[] {
     var dat: any[] = [];
     for(var i = 0; i < transactions.length; i++) {
       dat.push(transactions[i][targetData]);  
     }
+    console.log("used date: ",dat)
     return dat; 
   }
 
+  // Creates the text to go in the plotly description box
+  // The box should have every transaction that took place on that date.
+  // The data that should be plotted by the graph should be (for now) the minimum balance that is
+  // present for a transaction on a given date.
   private getText(transactions: Transaction[]): string[] {
     //make array, date by date, containing info you want in hover box
     //i.e. make Debit/Credit: AMOUNT description: DESCRIPTION
-    //also coming upon that time where you'll have to clean up the description
     var text: string[] = [ ];
-    var dateText: string = 'Balance Change   Description<br>';
+    var dateText: string = `Balance       Change      Description<br>`;
+    console.log("text Transactions: ",transactions);
     for(var i = 0; i < transactions.length; i++) {
 
       //I think this will fail on the last case if both transactions are on same day bc wont get pushed
-      if(i != 0 && transactions[i].date == transactions[i - 1].date) {
+      if( i === 0) {
+        dateText += this.getTextHelper(transactions[i]);
+      } else if(i != 0 && transactions[i].date == transactions[i - 1].date) {
         //push to same text element
         dateText += this.getTextHelper(transactions[i]);
-
+        console.log(transactions[i]);
+        console.log("DATETEXT!: ", dateText);
       } else {
-        //push last one to text array, clear current, and push this to current.
+        //push last transaction to text array, clear current, and push this to current.
+        console.log("Else Transaction: ", transactions[i]['name']);
         text.push(dateText);
-        dateText = 'Balance Chance   Description<br>';
+        dateText = `Balance       Change      Description<br>`;
         dateText += this.getTextHelper(transactions[i]); //initialize with new data
+        console.log("Else DateText: ", dateText);
       }
     }
-      console.log(dateText);
+      console.log("text: ",text);
 
     return text; 
   }
 
   getTextHelper(transaction: Transaction): string {
       if(transaction.credit != null) {
-        return `Date: ${transaction.date} +${transaction.credit}: ${transaction.description}<br>` 
+        return `${transaction.balance}         +${transaction.credit}             ${transaction.name}<br>` 
       } else if(transaction.debit != null) {
-        return `Date: ${transaction.date} -${transaction.debit}: ${transaction.description}<br>` 
+        return `${transaction.balance}         -${transaction.debit}                 ${transaction.name}<br>` 
       }
-
   }
-
-
 }

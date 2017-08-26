@@ -14,6 +14,7 @@ import * as glob from '../globals';
 export class TransactionsComponent implements OnInit {
     start_d: string = '2017-8-4';
     end_d: string = '2017-8-10';
+    editing = {};
     transactions: Array<Transaction>;
     rows: Transaction[];
 
@@ -38,7 +39,19 @@ export class TransactionsComponent implements OnInit {
       error => this.handleError(error)
     );
   }
-  
+
+  printEditing() {
+    console.log(this.editing);
+  }
+
+  updateValue(event, cell, rowIndex) {
+    this.editing[rowIndex + '-' + cell] = false;
+    this.rows[rowIndex][cell] = event.target.value;
+    this.rows = [...this.rows];
+    console.log('UPDATED!', this.rows[rowIndex][cell]);
+  }
+ 
+ 
   private handleError (error: any) {
     return Observable.throw("Database error");
   }

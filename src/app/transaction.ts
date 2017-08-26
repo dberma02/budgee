@@ -4,7 +4,9 @@ export class Transaction {
     public credit: number,
     public balance: number,
     public date: string, //not sure this will be correct
-    public description: string,
-    public category: string
+    public name: string,
+    public location: string,
+    public category: string,
+    public description: string
   ){}
 }
