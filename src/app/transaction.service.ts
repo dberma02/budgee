@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Transaction } from './transaction';
-import { TRANSACTIONS } from './mock-transactions';
+//import { TRANSACTIONS } from './mock-transactions';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
