@@ -29,7 +29,6 @@ STAGE 1:
   Scaled down version to get up quickly:
     -No "categories" model in rails
     -Forms in table not drop down, user input text directly
-    
 
 
 Big Picture Goal:
