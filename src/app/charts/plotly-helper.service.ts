@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Transaction } from '../transaction';
+import { TransactionsByDate } from './transactions-by-date';
 
 
-// Right now: Fixed the description text so it is formatted better. 
-// Fixed the dates displayed on x axis so that they have correct number of points in the Plotly data array.
-// Need to alter the y axis (balance) Plotly data array so that it has the correct number of data points, 
-// matching length of other array. i.e. design so that, for each day, if multiple transactions take place,
-// only one will be added to the array to be represented on graph. 
-//    -if only spending, no income, use lowest balance
-//    -if only income, use highest balance
-//    -if income and spending, check if total credit for the day is greater than total debit for the day, choose
-//     which value to display accordingly
+// Right now:
+// Made the function to choose balance correctly based on credit/dibit information for that day, if multiple
+// transactions.
+// TODO: -test above more thuroughly
+//       -add to description so that balance is shown for stubbed data
+//       -orgainize, refactor, remove comments. code got pretty messy
 //
 
 
@@ -22,9 +20,10 @@ export class PlotlyHelperService {
   //Make sure that this is plotting only one balance per day--right now don't think that's what's happening
   monthlyBalanceChart(transactions: Transaction[], xdat: string, ydat: string, daterange: string): any[] {
     console.log( this.formatPlotlyDataDate(transactions, 'stub'));
+    console.log( "dataByDate", this.dataByDate(transactions));
     var balance = {
       x: this.formatPlotlyDataDate(transactions, xdat),
-      y: this.formatPlotlyData(transactions, ydat),
+      y: this.formatPlotlyDataBalance(transactions, ydat),
       type: 'scatter',
       hoverinfo: 'text',
       mode: 'lines',
@@ -40,24 +39,119 @@ export class PlotlyHelperService {
 
     return [ [balance ], layout];
   }
-  
+
   //for charts that have date on x axis
-  //I believe this is a job for a database
   private formatPlotlyDataDate(transactions: Transaction[], targetData: string) {
-    //if balance, return one balance per day
-    //  if credit, return daily high
-    //  if debit, return daily low
-    //  this seems like maybe a backend task???
     var dates = this.formatPlotlyData(transactions, 'date'); 
     console.log("dates: ", this.unique(dates)); 
     return this.unique(dates)
   }
 
-//  private Date.prototype.addDays = function(days) {
-//    var dat = new Date(this.valueOf());
-//    dat.setDate(dat.getDate() + days);
-//    return dat;
-//  }; 
+// Design so that, for each day, if multiple transactions take place,
+// only one will be added to the array to be represented on graph. 
+//    -if only spending, no income, use lowest balance
+//    -if only income, use highest balance
+//    -if income and spending, check if total credit for the day is greater than total debit for the day, choose
+//     which value to display accordingly
+//  TODO: Test this more thoroughly
+  
+  // returns the array of balances that will be plotted on graph
+  private formatPlotlyDataBalance(transactionData: Transaction[], targetData: string) {
+    var transactions: TransactionsByDate[] = this.dataByDate(transactionData);
+    var balanceData: number[] = [];
+
+    console.log("format: ", transactions);
+    for(var i = 0; i < transactions.length; i++) {
+      console.log(i);
+      if(transactions[i].debits.length > 0 && transactions[i].credits.length > 0) {
+        //credit and debit transactions both take place on this day
+        var debitSum = transactions[i].debits.reduce((a,b) => a + b, 0);
+        var creditSum = transactions[i].credits.reduce((a,b) => a + b, 0);
+        if (debitSum > creditSum) {
+          var balance = Math.min.apply(null, transactions[i].balances);
+          balanceData.push(balance);
+        } else if(creditSum > debitSum) {
+          var balance = Math.max.apply(null, transactions[i].balances);
+          balanceData.push(balance);
+        } else if(creditSum === debitSum) {
+          //TODO 
+          console.log("Transaction Data Edge Case");
+        }
+      } else if(transactions[i].debits.length > 0) {
+        // only debit transactions take place on this day
+        var balance = Math.min.apply(null, transactions[i].balances);
+        balanceData.push(balance);
+      } else if(transactions[i].credits.length > 0) {
+        // only credit transactions take place on this day
+        var balance = Math.max.apply(null, transactions[i].balances);
+        balanceData.push(balance);
+      } else {
+        // neither debit nor credit transaction take place on this day. Stub Data.
+        console.log("STTTUB");
+        console.log(balanceData);
+        if( i === 0) {
+          console.log(transactions[i].balances[0]);
+          var tmp = transactions[i].balances[0]; 
+          balanceData.push(balance);
+        } else {
+          console.log(balanceData[balanceData.length - 1]);
+          var tmp = balanceData[balanceData.length - 1]; 
+          balanceData.push(balance);
+        }
+      }
+    }
+    console.log("balanceData ", balanceData);
+    return balanceData;
+    
+  }
+
+  // formats transaction data. Returns an array of objects, each contianing a date, an array of
+  // all debit transactions that took place on that day, and array of all credit transactions
+  // that took place on that day.
+  private dataByDate(transactions: Transaction[]) {
+    //    var tmpData = {date: null, debit: [], credit: []};
+    var tmpData: TransactionsByDate = {date: null, debits: [], credits: [], balances: []};
+    // data structure: [{date: DATE, debit:[DEBIT],credit:[CREDIT]],{......},.....]
+    var dateData: any[] = [];
+    for(var i = 0; i < transactions.length; i++) {
+      if(i === 0) {
+        tmpData.date = transactions[i].date;
+        tmpData.balances.push(transactions[i].balance);
+        if(transactions[i].debit) {
+          tmpData.debits.push(transactions[i].debit);
+        }
+        if(transactions[i].credit) {
+          tmpData.credits.push(transactions[i].credit);
+        }
+      } else if(transactions[i].date === tmpData.date) {
+        // this transaction occured on the same day
+        tmpData.balances.push(transactions[i].balance);
+        if(transactions[i].debit) {
+          tmpData.debits.push(transactions[i].debit);
+        }
+        if(transactions[i].credit) {
+          tmpData.credits.push(transactions[i].credit);
+        }
+      } else {
+        // this transaction occured on the next day
+        dateData.push(tmpData);
+        var tmpData: TransactionsByDate = {date: transactions[i].date, debits: [], credits: [],
+                                           balances: [transactions[i].balance]};
+
+        if(transactions[i].debit) {
+          tmpData.debits.push(transactions[i].debit);
+        }
+        if(transactions[i].credit) {
+          tmpData.credits.push(transactions[i].credit);
+        }
+        
+        if(i === transactions.length - 1) {
+          dateData.push(tmpData);
+        }
+      }
+    }
+    return dateData;
+  }
 
   private unique(a: Array<string>): Array<string> {
     var seen = {};
@@ -79,6 +173,7 @@ export class PlotlyHelperService {
     return dat; 
   }
 
+  // TODO: Make so that on day where data is stubbed, description contains balance
   // Creates the text to go in the plotly description box
   // The box should have every transaction that took place on that date.
   // The data that should be plotted by the graph should be (for now) the minimum balance that is
