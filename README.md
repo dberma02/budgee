@@ -1,31 +1,45 @@
-For successful build, after cloning and running npm install, please grab bootstrap cosmo theme from https://bootswatch.com/cosmo/ and
-save the bootstrap-cosmo.min.css file in /budgee/node_modules/bootstrap/dist/css/bootstrap-cosmo.min.css
+# Budgee
+## A personal finance web application
 
-# MyMintCli
+### Installation + Setup:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
+Please make sure you have installed Angular Cli, Ruby on Rails 5, and MySQL on your computer.    
+Run the rails command `rake db:create` to create the development and test databases.    
+Run the rails command `rake db:migrate` to run database migrations.    
 
-## Development server
+cd into the `client` directiory and run `npm install` to make sure all Angular2 dependencies are installed.
+To import the bootstrap stylesheets, make sure wget is installed on your computer, and simply run `sh ./import_bootstrap` from the client folder.   
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Usage:
 
-## Code scaffolding
+From the budgee directory, run `rails s` to launch the rails server on port 3000. From the `budgee/client` directory, run
+`ng serve` to launch the Angular2 server. Open up `localhost:4200` on your web browser. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+### About the project:
 
-## Build
+This project was inspired by this past summer that I spent in New York. Within my first week living in the city,
+it became clear how quickly my spending could balloon if I did not keep a careful watch on my balance. 
+Looking through my bank statements, it was difficult to parse all of the information provided, make useful comparisons, and get a full picture of my spending.
+I wanted a place where I could quickly get a breakdown of my recent spending, and compare it to previous trends. I soon realized this
+problem presented an interesting opportunity for a project through which I could work on my web development skills and practice
+creating useful data visualizations.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+This project is still in progress, and only some of it's features have been implemented at this point. The website uses Angular2 views
+which interact with a Ruby Rails API that sends and retrieves transaction data. The API when sent transaction data (formatted like the 
+example data, whose format is that of a transaction csv downloaded from an actual bank), the API cleans and extracts relevant
+transaction information, and saves it to the database. The views call the API to recieve the data for the transactions table and for 
+all graphs.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+I am planning for the project to have three main components: A transactions table where one can view and categorize each of his/her transactions,
+a graphs page where one can see different breakdowns of his/her spending through multiple graphs, and a forecasts page where one can adjust
+his/her average monthly spending levels across spending categories, and view the impact of these spending changes on his future balance.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
 
-## Further help
+So far, I have implemented most of the functionality necessary from the API. I have successfully implemented an early stage version of the table
+and graphs pages, each of which pull data from the API. At the moment, the data is staged with sample transaction information as I have not
+implemented support for the upload of transaction data via csv. The table does not currently support functionality for user to edit the spending
+category of each transaction item. I have currently implemented one graph of the spending data. I have not yet implemented any of the forecasts
+component.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
