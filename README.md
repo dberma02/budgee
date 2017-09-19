@@ -28,18 +28,17 @@ creating useful data visualizations.
 This project is still in progress, and only some of it's features have been implemented at this point. The website uses Angular2 views
 which interact with a Ruby Rails API that sends and retrieves transaction data. The API when sent transaction data (formatted like the 
 example data, whose format is that of a transaction csv downloaded from an actual bank), the API cleans and extracts relevant
-transaction information, and saves it to the database. The views call the API to recieve the data for the transactions table and for 
-all graphs.
+transaction information, and saves it to the database (I have been runnung the app with a local MySQL). The views call the API to recieve the data for the transactions table and for all graphs.
 
 
 I am planning for the project to have three main components: A transactions table where one can view and categorize each of his/her transactions,
 a graphs page where one can see different breakdowns of his/her spending through multiple graphs, and a forecasts page where one can adjust
-his/her average monthly spending levels across spending categories, and view the impact of these spending changes on his future balance.
+his/her average monthly spending levels across spending categories, and view the impact of these spending changes on his/her future balance.
 
 
 So far, I have implemented most of the functionality necessary from the API. I have successfully implemented an early stage version of the table
-and graphs pages, each of which pull data from the API. At the moment, the data is staged with sample transaction information as I have not
-implemented support for the upload of transaction data via csv. The table does not currently support functionality for user to edit the spending
-category of each transaction item. I have currently implemented one graph of the spending data. I have not yet implemented any of the forecasts
-component.
+and graphs pages, each of which pull data from the API. At the moment, the data is staged with sample transaction information. I plan to implement
+the upload transaction data via csv. I plan to implement in-cell editing of the category column of the table where the user can categorize his/her 
+spending data. I have currently implemented one graph of the spending data. I have not yet implemented any of the forecasts component.
+
 
