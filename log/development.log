@@ -8799,3 +8799,610 @@ Unpermitted parameter: :format
 Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-08-30 12:36:11 -0400
+  [1m[35m (41.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (5.5ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mTransaction Load (6.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 49ms (Views: 3.3ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-08-30 12:36:21 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-08-30 12:43:38 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-09-09 13:36:09 -0400
+  [1m[35m (45.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mTransaction Load (1.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 59ms (Views: 4.3ms | ActiveRecord: 29.9ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-09 13:36:25 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mTransaction Load (11.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 20ms (Views: 1.3ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-09-09 13:36:46 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-09 13:37:25 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-09 13:37:58 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-09-09 13:38:45 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-09-19 17:33:28 -0400
+  [1m[35m (42.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 55ms (Views: 2.8ms | ActiveRecord: 29.5ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:33:38 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:35:12 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:35:18 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:35:26 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:35:54 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:36:29 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:37:08 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (2.0ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:37:21 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:37:25 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-09-19 17:37:33 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (1.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-09-19 17:37:38 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:37:39 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-09-19 17:43:36 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>"", "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `location`, `category`, `description`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, '2017-06-30', 'PIER 66 MARITIME', 'NEW YORK, NY, US', 'Bars', 'PIER 66 MARITIME              POS     NEW YORK      NY US        000075', '2017-09-19 21:43:36', '2017-09-19 21:43:36')[0m
+  [1m[35m (17.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 23ms (Views: 0.2ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-09-19 17:43:49 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 8ms (Views: 1.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-09-19 17:44:12 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>"", "balance"=>2642.14, "date"=>"8/8/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `location`, `category`, `description`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, '2017-08-08', 'PIER 66 MARITIME', 'NEW YORK, NY, US', 'Bars', 'PIER 66 MARITIME              POS     NEW YORK      NY US        000075', '2017-09-19 21:44:12', '2017-09-19 21:44:12')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-09-19 17:44:18 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:44:25 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-09-19 17:44:44 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-09-19 17:44:59 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-09-19 17:45:04 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:45:11 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:45:13 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:45:29 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-09-19 17:45:48 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>"", "balance"=>2642.14, "date"=>"8/7/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US        000075", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `location`, `category`, `description`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, '2017-08-07', 'PIER 66 MARITIME', 'NEW YORK, NY, US', 'Bars', 'PIER 66 MARITIME              POS     NEW YORK      NY US        000075', '2017-09-19 21:45:48', '2017-09-19 21:45:48')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/transactions?format=table&start_date=2017-8-4&end_date=2017-8-10" for 127.0.0.1 at 2017-09-19 17:45:52 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-4", "end_date"=>"2017-8-10"}
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  [1m[36mTransaction Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m
+  [1m[36mCACHE Transaction Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `transactions` LIMIT 1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` ORDER BY date DESC[0m
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:45:59 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:46:03 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:48:54 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:49:03 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:49:17 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:51:59 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 17:52:34 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 18:10:12 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/transactions?format=chart&start_date=2017-8-5&end_date=2017-8-8" for 127.0.0.1 at 2017-09-19 18:13:07 -0400
+Processing by Api::TransactionsController#index as 
+  Parameters: {"start_date"=>"2017-8-5", "end_date"=>"2017-8-8"}
+Unpermitted parameter: :format
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT `transactions`.* FROM `transactions` WHERE (`transactions`.`date` BETWEEN '2017-08-05' AND '2017-08-08') ORDER BY date ASC[0m
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-09-19 18:14:28 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+sample_data.json
+  
+ActionDispatch::Http::Parameters::ParseError (743: unexpected token at 'sample_data.json'):
+  
+actionpack (5.1.2) lib/action_dispatch/http/parameters.rb:113:in `rescue in parse_formatted_parameters'
+actionpack (5.1.2) lib/action_dispatch/http/parameters.rb:107:in `parse_formatted_parameters'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:358:in `block in POST'
+rack (2.0.3) lib/rack/request.rb:57:in `fetch'
+rack (2.0.3) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:357:in `POST'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:286:in `_wrapper_enabled?'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:235:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-09-19 18:15:29 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{data:
+  
+ActionDispatch::Http::Parameters::ParseError (743: unexpected token at '{data:'):
+  
+actionpack (5.1.2) lib/action_dispatch/http/parameters.rb:113:in `rescue in parse_formatted_parameters'
+actionpack (5.1.2) lib/action_dispatch/http/parameters.rb:107:in `parse_formatted_parameters'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:358:in `block in POST'
+rack (2.0.3) lib/rack/request.rb:57:in `fetch'
+rack (2.0.3) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:357:in `POST'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:286:in `_wrapper_enabled?'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:235:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-09-19 18:16:15 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{data:
+  
+ActionDispatch::Http::Parameters::ParseError (743: unexpected token at '{data:'):
+  
+actionpack (5.1.2) lib/action_dispatch/http/parameters.rb:113:in `rescue in parse_formatted_parameters'
+actionpack (5.1.2) lib/action_dispatch/http/parameters.rb:107:in `parse_formatted_parameters'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:358:in `block in POST'
+rack (2.0.3) lib/rack/request.rb:57:in `fetch'
+rack (2.0.3) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:357:in `POST'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:286:in `_wrapper_enabled?'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:235:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/api/transactions" for 127.0.0.1 at 2017-09-19 18:18:46 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US            000075", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `location`, `category`, `description`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, '2017-06-30', 'PIER 66 MARITIME', 'NEW YORK, NY, US', 'Bars', 'PIER 66 MARITIME              POS     NEW YORK      NY US            000075', '2017-09-19 22:18:46', '2017-09-19 22:18:46')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-09-19 18:19:13 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US            000075", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `location`, `category`, `description`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, '2017-06-30', 'PIER 66 MARITIME', 'NEW YORK, NY, US', 'Bars', 'PIER 66 MARITIME              POS     NEW YORK      NY US            000075', '2017-09-19 22:19:13', '2017-09-19 22:19:13')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-09-19 18:21:45 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US            000075", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `location`, `category`, `description`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, '2017-06-30', 'PIER 66 MARITIME', 'NEW YORK, NY, US', 'Bars', 'PIER 66 MARITIME              POS     NEW YORK      NY US            000075', '2017-09-19 22:21:45', '2017-09-19 22:21:45')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/transactions" for 127.0.0.1 at 2017-09-19 18:22:26 -0400
+Processing by Api::TransactionsController#create as */*
+  Parameters: {"data"=>{"attributes"=>[{"debit"=>9.62, "credit"=>nil, "balance"=>2642.14, "date"=>"6/30/17", "description"=>"PIER 66 MARITIME              POS     NEW YORK      NY US            000075", "category"=>"Bars"}]}, "transaction"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `transactions` (`debit`, `balance`, `date`, `name`, `location`, `category`, `description`, `created_at`, `updated_at`) VALUES (9.62, 2642.14, '2017-06-30', 'PIER 66 MARITIME', 'NEW YORK, NY, US', 'Bars', 'PIER 66 MARITIME              POS     NEW YORK      NY US            000075', '2017-09-19 22:22:26', '2017-09-19 22:22:26')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
