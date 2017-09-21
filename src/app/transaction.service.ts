@@ -54,8 +54,4 @@ export class TransactionService {
     return Observable.throw("Database error");
   }
 
-//    getTransactions(): Promise<Transaction[]> {
-//        return Promise.resolve(TRANSACTIONS);
-//    }
-
 }

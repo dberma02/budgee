@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+// Planning to replace this with an Angular2 DatePicker package
+
 const MONTHS = [ 
     'January',
     'February',

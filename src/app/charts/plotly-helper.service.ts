@@ -8,19 +8,15 @@ import { TransactionsByDate } from './transactions-by-date';
 // transactions.
 // TODO: -test above more thuroughly
 //       -add to description so that balance is shown for stubbed data
-//       -orgainize, refactor, remove comments. code got pretty messy
 //
-
 
 @Injectable()
 export class PlotlyHelperService {
 
   constructor() { }
 
-  //Make sure that this is plotting only one balance per day--right now don't think that's what's happening
   monthlyBalanceChart(transactions: Transaction[], xdat: string, ydat: string, daterange: string): any[] {
-    console.log( this.formatPlotlyDataDate(transactions, 'stub'));
-    console.log( "dataByDate", this.dataByDate(transactions));
+
     var balance = {
       x: this.formatPlotlyDataDate(transactions, xdat),
       y: this.formatPlotlyDataBalance(transactions, ydat),
@@ -43,7 +39,6 @@ export class PlotlyHelperService {
   //for charts that have date on x axis
   private formatPlotlyDataDate(transactions: Transaction[], targetData: string) {
     var dates = this.formatPlotlyData(transactions, 'date'); 
-    console.log("dates: ", this.unique(dates)); 
     return this.unique(dates)
   }
 
@@ -60,9 +55,7 @@ export class PlotlyHelperService {
     var transactions: TransactionsByDate[] = this.dataByDate(transactionData);
     var balanceData: number[] = [];
 
-    console.log("format: ", transactions);
     for(var i = 0; i < transactions.length; i++) {
-      console.log(i);
       if(transactions[i].debits.length > 0 && transactions[i].credits.length > 0) {
         //credit and debit transactions both take place on this day
         var debitSum = transactions[i].debits.reduce((a,b) => a + b, 0);
@@ -74,8 +67,9 @@ export class PlotlyHelperService {
           var balance = Math.max.apply(null, transactions[i].balances);
           balanceData.push(balance);
         } else if(creditSum === debitSum) {
-          //TODO 
-          console.log("Transaction Data Edge Case");
+          //TODO
+          // Then you broke even for the day. Use yesterday's balance? (if not first day being graphed)
+          console.log("Error in formatPlotlyDataBalance --- incomplete implementation");
         }
       } else if(transactions[i].debits.length > 0) {
         // only debit transactions take place on this day
@@ -87,20 +81,15 @@ export class PlotlyHelperService {
         balanceData.push(balance);
       } else {
         // neither debit nor credit transaction take place on this day. Stub Data.
-        console.log("STTTUB");
-        console.log(balanceData);
         if( i === 0) {
-          console.log(transactions[i].balances[0]);
           var tmp = transactions[i].balances[0]; 
           balanceData.push(balance);
         } else {
-          console.log(balanceData[balanceData.length - 1]);
           var tmp = balanceData[balanceData.length - 1]; 
           balanceData.push(balance);
         }
       }
     }
-    console.log("balanceData ", balanceData);
     return balanceData;
     
   }
@@ -160,55 +149,49 @@ export class PlotlyHelperService {
     });   
   }
 
-  // Returns a 1d array of data, returning array of with one element for each transaction,
+  // Returns returning array with one element for each transaction,
   // not one element for each date.
-  // For this graph, should return one element for each Date, and then there should be a different process for
-  // making the Description, which will show all of the transactions that took place on that date.
   private formatPlotlyData(transactions: Transaction[], targetData: string): any[] {
     var dat: any[] = [];
     for(var i = 0; i < transactions.length; i++) {
       dat.push(transactions[i][targetData]);  
     }
-    console.log("used date: ",dat)
     return dat; 
   }
 
   // TODO: Make so that on day where data is stubbed, description contains balance
-  // Creates the text to go in the plotly description box
-  // The box should have every transaction that took place on that date.
-  // The data that should be plotted by the graph should be (for now) the minimum balance that is
-  // present for a transaction on a given date.
+  // Creates the text to go in the plotly description box. The box should have every 
+  // transaction that took place on that date. The data that should be plotted by the 
+  // graph should be the minimum balance present for a transaction on a given date if 
+  // day's total spending greater than the days total income. If day's total income greater
+  // than day's total spending, graph should display the day's max balance.
+  
+  
   private getText(transactions: Transaction[]): string[] {
     //make array, date by date, containing info you want in hover box
     //i.e. make Debit/Credit: AMOUNT description: DESCRIPTION
     var text: string[] = [ ];
     var dateText: string = `Balance       Change      Description<br>`;
-    console.log("text Transactions: ",transactions);
     for(var i = 0; i < transactions.length; i++) {
 
       //I think this will fail on the last case if both transactions are on same day bc wont get pushed
       if( i === 0) {
-        dateText += this.getTextHelper(transactions[i]);
+        dateText += this.formatDescription(transactions[i]);
       } else if(i != 0 && transactions[i].date == transactions[i - 1].date) {
         //push to same text element
-        dateText += this.getTextHelper(transactions[i]);
-        console.log(transactions[i]);
-        console.log("DATETEXT!: ", dateText);
+        dateText += this.formatDescription(transactions[i]);
       } else {
         //push last transaction to text array, clear current, and push this to current.
-        console.log("Else Transaction: ", transactions[i]['name']);
         text.push(dateText);
         dateText = `Balance       Change      Description<br>`;
-        dateText += this.getTextHelper(transactions[i]); //initialize with new data
-        console.log("Else DateText: ", dateText);
+        dateText += this.formatDescription(transactions[i]); //initialize with new data
       }
     }
-      console.log("text: ",text);
 
     return text; 
   }
 
-  getTextHelper(transaction: Transaction): string {
+  formatDescription(transaction: Transaction): string {
       if(transaction.credit != null) {
         return `${transaction.balance}         +${transaction.credit}             ${transaction.name}<br>` 
       } else if(transaction.debit != null) {

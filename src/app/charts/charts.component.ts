@@ -30,10 +30,6 @@ export class ChartsComponent implements OnInit {
       },
       error => this.handleError(error)
     );
-//    this.transactionService.getTransactions().then(transactions => {
-//      this.transactions = transactions;
-//      this.monthlyBalance(); 
-//    });
   }
 
   monthlyBalance(): void {
@@ -42,12 +38,9 @@ export class ChartsComponent implements OnInit {
     var plotlyDat: object;
     plotlyDat = this.plotlyService.monthlyBalanceChart(this.transactions, xdat, ydat, "June");
     Plotly.newPlot('plotlychart', plotlyDat[0], plotlyDat[1]);
-
   }
   
   private handleError (error: any) {
     return Observable.throw("Database error");
   }
-
- 
 }
