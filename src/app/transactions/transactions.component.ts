@@ -6,12 +6,12 @@ import * as glob from '../globals';
 
 
 @Component({
-  selector: 'table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css'],
+  selector: 'transactions',
+  templateUrl: './transactions.component.html',
+  styleUrls: ['./transactions.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class TableComponent implements OnInit {
+export class TransactionsComponent implements OnInit {
     start_d: string = '2017-8-4';
     end_d: string = '2017-8-10';
     editing = {};
