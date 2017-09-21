@@ -4,7 +4,7 @@ import { Http, HttpModule, RequestOptions, XHRBackend } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { TransactionsModule } from './transactions/transactions.module';
+import { TableModule } from './table/table.module';
 import { TransactionService } from './transaction.service';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { NavbarTopComponent } from './navbar-top/navbar-top.component';
@@ -20,7 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     HttpModule,
     BrowserModule,
-    TransactionsModule,
+    TableModule,
     DashboardModule,
     ForecastsModule,
     ChartsModule,
