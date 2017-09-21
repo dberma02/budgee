@@ -52,7 +52,6 @@ module Api
     
     def format
       params.require(:format)
-      params.permit(:start_date, :end_date)
       params[:format]
     end
 
@@ -82,9 +81,6 @@ module Api
       createParams[:attributes].each do |transaction|
         transaction[:date] = parseDate(transaction[:date])
         Transaction.create(transaction)
-#       unless transaction.save
-#         return "error" 
-#       end
       end
       return "success"
     end

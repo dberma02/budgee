@@ -1,13 +1,3 @@
-FORMATTING FOR TRANSACTIONS CREATE
-
-The input should be formatted in JSON API format as follows:
-
-{"data": {"attributes":[{"debit": 9.62,"credit": null,"balance": 2642.14,"date": "6/30/17","description": "PIER 66 MARITIME              POS     NEW YORK      NY US        000075","category": "Bars"}]}}
-
-Although the data straight from the bank will give all fields in uppercase letters, the API takes them in lower case, so they will need to be changed accordingly.
-The sample transactions.JSON also does not have a category (as that is added later by the user)
-
-
 Big Picture Goal:
   Make categories editable from table
 

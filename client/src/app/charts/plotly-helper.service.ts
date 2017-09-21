@@ -170,8 +170,9 @@ export class PlotlyHelperService {
   private getText(transactions: Transaction[]): string[] {
     //make array, date by date, containing info you want in hover box
     //i.e. make Debit/Credit: AMOUNT description: DESCRIPTION
+    console.log(transactions);
     var text: string[] = [ ];
-    var dateText: string = `Balance       Change      Description<br>`;
+    var dateText: string = `Date                     Balance       Change      Description<br>`;
     for(var i = 0; i < transactions.length; i++) {
 
       //I think this will fail on the last case if both transactions are on same day bc wont get pushed
@@ -183,7 +184,12 @@ export class PlotlyHelperService {
       } else {
         //push last transaction to text array, clear current, and push this to current.
         text.push(dateText);
-        dateText = `Balance       Change      Description<br>`;
+        if(transactions[i].credit == null && transactions[i].debit == null) {
+          //stub data heading
+          dateText = `Date                      Balance<br>`;
+        } else {
+          dateText = `Date                      Balance       Change      Description<br>`;
+        }
         dateText += this.formatDescription(transactions[i]); //initialize with new data
       }
     }
@@ -192,10 +198,14 @@ export class PlotlyHelperService {
   }
 
   formatDescription(transaction: Transaction): string {
+      console.log("IN FORMAT DISC " + transaction.date);
       if(transaction.credit != null) {
-        return `${transaction.balance}         +${transaction.credit}             ${transaction.name}<br>` 
+        return `${transaction.date}              ${transaction.balance}         +${transaction.credit}             ${transaction.name}<br>` 
       } else if(transaction.debit != null) {
-        return `${transaction.balance}         -${transaction.debit}                 ${transaction.name}<br>` 
+        return `${transaction.date}              ${transaction.balance}         -${transaction.debit}                 ${transaction.name}<br>` 
+      } else {
+        return `${transaction.date}              ${transaction.balance}<br>` 
+        
       }
   }
 }

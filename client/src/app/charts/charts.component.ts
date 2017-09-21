@@ -15,7 +15,7 @@ declare var Plotly: any;
 })
 export class ChartsComponent implements OnInit {
   start_d: string = '2017-8-5';
-  end_d: string = '2017-8-8';
+  end_d: string = '2017-8-31';
 
   transactions: Transaction[];
 
