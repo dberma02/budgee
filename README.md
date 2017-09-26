@@ -37,16 +37,15 @@ problem presented an interesting opportunity for a project through which I could
 creating useful data visualizations.
 
 
-This project is still in progress, and only some of it's features have been implemented at this point. The website uses Angular2 views
-which interact with a Ruby Rails API that sends and retrieves transaction data. When sent transaction data (formatted like a
- transaction csv downloaded from an actual bank), the API cleans and extracts relevant
-transaction information, and saves it to the database (I have been runnung the app with a local MySQL). The views  recieve
-all data displayed in the transactions table and in all graphs from calls to the API. 
-
-
 I am planning for the project to have three main components: A transactions table where one can view and categorize each of his/her transactions,
 a graphs page where one can see different breakdowns of his/her spending through multiple graphs, and a forecasts page where one can adjust
 his/her average monthly spending levels across spending categories, and view the impact of these spending changes on his/her future balance.
+
+
+The website uses Angular2 views which interact with a Ruby Rails API that sends and retrieves transaction data. When sent transaction data 
+(formatted like a transaction csv downloaded from an actual bank), the API cleans and extracts relevant transaction information, and saves 
+it to the database (I have been runnung the app with a local MySQL). The views recieve all data displayed in the transactions table and in
+all graphs from calls to the API. 
 
 
 So far, I have implemented most of the functionality necessary from the API. I have successfully implemented an early stage version of the table
