@@ -6,18 +6,19 @@
 Please make sure you have installed Angular Cli, Ruby on Rails 5, and MySQL on your computer.    
 From the `budgee` directory, run the rails command `rake db:create` to create the development and test databases.
 From the same directory, run the rails command `rake db:migrate` to run database migrations.    
-Run `rails s` to launch the Rails server. You will need ther server to be running in the next few steps, for
-in the next few steps we will populate your local database with sample data via budgee's api endpoint.
+Run `rails s` to launch the Rails server. You will need ther server to be running in the next few steps, when
+we will populate your local database with sample data via budgee's api endpoint.
 
 From the`client` directiory, and run `npm install` to install all Angular2 dependencies.
 Move to the `budgee/setup` directory, and run `sh ./import_all` to load the sample data to your local database
 and to import bootstrap stylesheets. For the stylesheets to import, you will need wget installed on your 
-computer. At this point, the web app should be ready to launch!
+computer. After you've run `import_all.xs` the web app should be ready to launch!
 
 ### Usage:
 
-From the budgee directory, run `rails s` to launch the rails server on port 3000. From the `budgee/client` directory, run
-`ng serve` to launch the Angular2 server. Open up `localhost:4200` on your web browser. 
+From the budgee directory, run `rails s` to launch the rails server on port 3000. From the 
+`budgee/client` directory, run `ng serve` to launch the Angular2 server on port 4200. Open up `localhost:4200`
+on your web browser. 
 
 ##### Rails API
 
@@ -38,9 +39,10 @@ creating useful data visualizations.
 
 
 This project is still in progress, and only some of it's features have been implemented at this point. The website uses Angular2 views
-which interact with a Ruby Rails API that sends and retrieves transaction data. The API when sent transaction data (formatted like the 
-example data, whose format is that of a transaction csv downloaded from an actual bank), the API cleans and extracts relevant
-transaction information, and saves it to the database (I have been runnung the app with a local MySQL). The views call the API to recieve the data for the transactions table and for all graphs.
+which interact with a Ruby Rails API that sends and retrieves transaction data. When sent transaction data (formatted like a
+ transaction csv downloaded from an actual bank), the API cleans and extracts relevant
+transaction information, and saves it to the database (I have been runnung the app with a local MySQL). The views  recieve
+all data displayed in the transactions table and in all graphs from calls to the API. 
 
 
 I am planning for the project to have three main components: A transactions table where one can view and categorize each of his/her transactions,
@@ -50,7 +52,8 @@ his/her average monthly spending levels across spending categories, and view the
 
 So far, I have implemented most of the functionality necessary from the API. I have successfully implemented an early stage version of the table
 and graphs pages, each of which pull data from the API. At the moment, the data is staged with sample transaction information. I plan to implement
-the upload transaction data via csv. I plan to implement in-cell editing of the category column of the table where the user can categorize his/her 
-spending data. I have currently implemented one graph of the spending data. I have not yet implemented any of the forecasts component.
+an uploader, so that one can upload hes/her own transaction data via csv. I plan to implement in-cell editing of the category column of the 
+table where the user can categorize his/her spending data. I have currently implemented one graph of the spending data. I have not yet 
+implemented any of the forecasts component.
 
 

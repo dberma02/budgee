@@ -1,3 +1,0 @@
-class LineGraph < Transaction
-
-end

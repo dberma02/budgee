@@ -9,7 +9,6 @@ class Transaction < ApplicationRecord
     count = 0
     date = start_d
     while date < end_d 
-      puts date
       if count == transactions.length
         if date == stubbed.last.date
           date = date + 1
@@ -20,7 +19,6 @@ class Transaction < ApplicationRecord
         end
       elsif transactions[count].date > date and checkLast(stubbed, date)
         if date == start_d
-          puts 'start'
           stubbed.push(stub(date, earlierBalance(start_d)))
         else
           stubbed.push(stub(date, stubbed.last.balance))
@@ -40,13 +38,19 @@ class Transaction < ApplicationRecord
     if self.debit
       dat = self.description.split(/POS/)
       name = dat[0]
-      location = dat[1]
-      
       self.name = name.sub(/[^a-zA-Z]+$/,"") 
-      location = location.sub(/[^a-zA-Z]+$/,"")
-      location = location.sub(/^[^a-zA-Z]+/,"")
-      location = location.gsub(/\s{2,}/,", ")
-      self.location = location.reverse.sub(/\s/," ,").reverse
+
+      location = dat[1]
+      if location
+        location = location.sub(/[^a-zA-Z]+$/,"")
+        location = location.sub(/^[^a-zA-Z]+/,"")
+        location = location.gsub(/\s{2,}/,", ")
+        self.location = location.reverse.sub(/\s/," ,").reverse
+      else
+        self.location = nil
+      end
+    elsif self.credit
+      self.name = self.description[0,25].sub(/^[^a-zA-Z]+/,"")
     end
   end
   

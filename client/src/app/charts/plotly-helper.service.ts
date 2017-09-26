@@ -200,7 +200,7 @@ export class PlotlyHelperService {
   formatDescription(transaction: Transaction): string {
       console.log("IN FORMAT DISC " + transaction.date);
       if(transaction.credit != null) {
-        return `${transaction.date}              ${transaction.balance}         +${transaction.credit}             ${transaction.name}<br>` 
+        return `${transaction.date}              ${transaction.balance}         +${transaction.credit}                ${transaction.name}<br>` 
       } else if(transaction.debit != null) {
         return `${transaction.date}              ${transaction.balance}         -${transaction.debit}                 ${transaction.name}<br>` 
       } else {
