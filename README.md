@@ -24,7 +24,7 @@ on your web browser.
 The Rails API takes input in the following format. This format follows the convention of transaction information from
 an actual bank.
 
-{"data": {"attributes":[{"debit": 9.62,"credit": null,"balance": 1000,"date": "3/15/17","description": "DUANE READE             POS     NEW YORK      NY US        000075","category": "PHARMACY"}]}}
+`{"data": {"attributes":[{"debit": 9.62,"credit": null,"balance": 1000,"date": "3/15/17","description": "DUANE READE             POS     NEW YORK      NY US        000075","category": "PHARMACY"}]}}`
 
 
 ### About the project:
