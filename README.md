@@ -3,11 +3,10 @@
 
 ### Installation + Setup:
 
-Please make sure you have installed Angular Cli, Ruby on Rails 5, and MySQL on your computer.    
-From the `budgee` directory, run the rails command `rake db:create` to create the development and test databases.
-From the same directory, run the rails command `rake db:migrate` to run database migrations.    
-Run `rails s` to launch the Rails server. You will need ther server to be running in the next few steps, when
-we will populate your local database with sample data via budgee's api endpoint.
+Please make sure you have installed Angular Cli, Ruby on Rails 5, and MySQL on your computer. Run the rails command `rake db:create` from the `budgee` directory
+to create the development and test databases. From the same directory, run the rails command `rake db:migrate` to
+run database migrations. Run `rails s` to launch the Rails server. You will need ther server to be running in the next
+few steps, when we will populate your local database with sample data via budgee's api endpoint.
 
 From the`client` directiory, and run `npm install` to install all Angular2 dependencies.
 Move to the `budgee/setup` directory, and run `sh ./import_all` to load the sample data to your local database
